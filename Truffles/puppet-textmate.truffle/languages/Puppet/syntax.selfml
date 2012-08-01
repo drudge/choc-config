@@ -1,0 +1,240 @@
+(root source.puppet
+    (include @line_comment)
+    (zone comment.block.puppet
+        (start
+            (regex ^\s*/\*))
+        (end
+            (regex \*/)))
+    (zone meta.definition.class.puppet
+        (start
+            (regex [(?x)^\s*
+					(node|class)\s+
+					((?:[-_A-Za-z0-9".]+::)*[-_A-Za-z0-9".]+)\s* # identifier]
+                (1 storage.type.puppet)
+                (2 entity.name.type.class.puppet)))
+        (end
+            (regex [(?={)]
+                (1 storage.type.puppet)
+                (2 entity.name.type.class.puppet)))
+        (subzones
+            (zone meta.definition.class.inherits.puppet
+                (start
+                    (regex [\b(inherits)\b\s+]
+                        (1 storage.modifier.puppet)))
+                (end
+                    (regex [(?={)]
+                        (1 storage.modifier.puppet)))
+                (subzones
+                    (zone support.type.puppet
+                        (match
+                            (regex [\b((?:[-_A-Za-z0-9".]+::)*[-_A-Za-z0-9".]+)\b])))))))
+    (zone meta.function.puppet
+        (start
+            (regex [^\s*(define)\s+([a-zA-Z0-9_:]+)\s*(\()]
+                (3 punctuation.definition.parameters.begin.puppet)
+                (1 storage.type.function.puppet)
+                (2 entity.name.function.puppet)))
+        (end
+            (regex [\)]
+                (1 punctuation.definition.parameters.end.puppet)))
+        (subzones
+            (zone meta.function.argument.no-default.puppet
+                (match
+                    (regex [((\$+)[a-zA-Z_\x{7f}-\x{ff}][a-zA-Z0-9_\x{7f}-\x{ff}]*)\s*(?=,|\))]
+                        (1 variable.other.puppet)
+                        (2 punctuation.definition.variable.puppet))))
+            (zone meta.function.argument.default.puppet
+                (start
+                    (regex [((\$+)[a-zA-Z_\x{7f}-\x{ff}][a-zA-Z0-9_\x{7f}-\x{ff}]*)(?:\s*(=)\s*)\s*]
+                        (3 keyword.operator.assignment.puppet)
+                        (1 variable.other.puppet)
+                        (2 punctuation.definition.variable.puppet)))
+                (end
+                    (regex [(?=,|\))]
+                        (3 keyword.operator.assignment.puppet)
+                        (1 variable.other.puppet)
+                        (2 punctuation.definition.variable.puppet)))
+                (subzones
+                    (include @parameter-default-types)))))
+    (zone meta.definition.resource.puppet
+        (match
+            (regex [^\s*(\w+)\s*{\s*(['"].+['"]):]
+                (1 storage.type.puppet)
+                (2 entity.name.section.puppet))))
+    (zone keyword.control.puppet
+        (match
+            (regex [\b(case|if|else)(?!::)])))
+    (zone entity.name.section.puppet
+        (match
+            (regex [((\$?)"?[a-zA-Z_\x{7f}-\x{ff}][a-zA-Z0-9_\x{7f}-\x{ff}]*"?):(?=\s+|$)])))
+    (include @strings)
+    (include @variable)
+    (zone meta.include.puppet
+        (start
+            (regex [(?i)\b(import|include)\b\s*]
+                (1 keyword.control.import.include.puppet)))
+        (end
+            (regex [(?=\s|$)])))
+    (zone constant.other.key.puppet
+        (match
+            (regex [\b\w+\s*(?==>)\s*])))
+    (zone constant.other.bareword.puppet
+        (match
+            (regex [(?<={)\s*\w+\s*(?=})])))
+    (zone support.function.puppet
+        (match
+            (list escape gsub alert crit debug notice defined emerg err failed file generate include info realize search tag tagged template warning)
+            (boundary.both))))
+
+(collection single-quoted-string
+    (zone string.quoted.single.puppet
+        (start
+            (regex '
+                (0 punctuation.definition.string.begin.puppet)))
+        (end
+            (regex '
+                (0 punctuation.definition.string.end.puppet)))
+        (subzones
+            (include @escaped_char))))
+
+(collection nested_braces
+    (zone
+        (start
+            (regex [\{]
+                (1 punctuation.section.scope.puppet)))
+        (end
+            (regex [\}]
+                (1 punctuation.section.scope.puppet)))
+        (subzones
+            (include @escaped_char)
+            (include @nested_braces))))
+
+(collection parameter-default-types
+    (include @strings)
+    (include @numbers)
+    (include @variables)
+    (zone keyword.operator.assignment.php
+        (match =))
+    (zone meta.array.php
+        (start
+            (regex `(\[)`
+                (1 punctuation.definition.array.begin.puppet)))
+        (end
+            (regex `\]`
+                (0 punctuation.definition.array.end.puppet)))
+        (subzones
+            (include @parameter-default-types)))
+    (include @constants))
+
+(collection double-quoted-string
+    (zone string.quoted.double.puppet
+        (start
+            (regex "
+                (0 punctuation.definition.string.begin.puppet)))
+        (end
+            (regex "
+                (0 punctuation.definition.string.end.puppet)))
+        (subzones
+            (include @escaped_char)
+            (include @variable))))
+
+(collection nested_braces_interpolated
+    (zone
+        (start
+            (regex [\{]
+                (1 punctuation.section.scope.puppet)))
+        (end
+            (regex [\}]
+                (1 punctuation.section.scope.puppet)))
+        (subzones
+            (include @escaped_char)
+            (include @variable)
+            (include @nested_braces_interpolated))))
+
+(collection nested_parens_interpolated
+    (zone
+        (start
+            (regex [\(]
+                (1 punctuation.section.scope.puppet)))
+        (end
+            (regex [\)]
+                (1 punctuation.section.scope.puppet)))
+        (subzones
+            (include @escaped_char)
+            (include @variable)
+            (include @nested_parens_interpolated))))
+
+(collection escaped_char
+    (zone constant.character.escape.puppet
+        (match
+            (regex \\.))))
+
+(collection variable
+    (zone variable.other.readwrite.global.puppet
+        (match
+            (regex [(\$)([a-zA-Zx7f-xff\$]|::)([a-zA-Z0-9_x7f-xff\$]|::)*\b]
+                (1 punctuation.definition.variable.puppet))))
+    (zone variable.other.readwrite.global.puppet
+        (match
+            (regex [(\$\{)(?:[a-zA-Zx7f-xff\$]|::)(?:[a-zA-Z0-9_x7f-xff\$]|::)*(\})]
+                (1 punctuation.definition.variable.puppet)
+                (2 punctuation.definition.variable.puppet)))))
+
+(collection nested_brackets
+    (zone
+        (start
+            (regex `\[`
+                (1 punctuation.section.scope.puppet)))
+        (end
+            (regex `\]`
+                (1 punctuation.section.scope.puppet)))
+        (subzones
+            (include @escaped_char)
+            (include @nested_brackets))))
+
+(collection nested_brackets_interpolated
+    (zone
+        (start
+            (regex `\[`
+                (1 punctuation.section.scope.puppet)))
+        (end
+            (regex `\]`
+                (1 punctuation.section.scope.puppet)))
+        (subzones
+            (include @escaped_char)
+            (include @variable)
+            (include @nested_brackets_interpolated))))
+
+(collection constants
+    (zone constant.language.php
+        (match
+            (list false true running present absent file directory)
+            (ignore-case)
+            (boundary.both))))
+
+(collection strings
+    (include @double-quoted-string)
+    (include @single-quoted-string))
+
+(collection nested_parens
+    (zone
+        (start
+            (regex [\(]
+                (1 punctuation.section.scope.puppet)))
+        (end
+            (regex [\)]
+                (1 punctuation.section.scope.puppet)))
+        (subzones
+            (include @escaped_char)
+            (include @nested_parens))))
+
+(collection line_comment
+    (zone meta.comment.full-line.puppet
+        (match
+            (regex [^((#).*$\n?)]
+                (1 comment.line.number-sign.puppet)
+                (2 punctuation.definition.comment.puppet))))
+    (zone comment.line.number-sign.puppet
+        (match
+            (regex [(#).*$\n?]
+                (1 punctuation.definition.comment.puppet)))))

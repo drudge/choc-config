@@ -1,0 +1,8 @@
+(name Parameter)
+
+(trigger
+    (tab =))
+
+(only-in source.puppet)
+
+(snippet [%{1="name"} => "%{2="value"}",%{0}])

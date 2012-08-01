@@ -1,0 +1,10 @@
+(name else)
+
+(trigger
+    (tab else))
+
+(only-in source.puppet)
+
+(snippet [else {
+	%{1="# enter puppet code"}
+}%{0}])

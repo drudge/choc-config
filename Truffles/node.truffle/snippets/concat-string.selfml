@@ -1,0 +1,8 @@
+(name [concat string])
+
+(trigger
+    (tab c))
+
+(only-in [source.js string])
+
+(snippet [' + %{0} + '])

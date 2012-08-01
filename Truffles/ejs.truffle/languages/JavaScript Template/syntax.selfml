@@ -1,0 +1,11 @@
+(root text.html.js
+    (zone source.js.embedded.html
+        (start
+            (regex <%=?
+                (0 punctuation.section.embedded.js)))
+        (end
+            (regex %>
+                (0 punctuation.section.embedded.js)))
+        (subzones
+            (include source.js)))
+    (include text.html.basic))

@@ -1,0 +1,10 @@
+(name package)
+
+(trigger
+    (tab package))
+
+(only-in source.puppet)
+
+(snippet [package { "%{1="name"}":
+	ensure => %{2="installed"},
+}%{0}])

@@ -1,0 +1,15 @@
+(name case)
+
+(trigger
+    (tab case))
+
+(only-in source.puppet)
+
+(snippet [case $%{1="variable"} {
+	"%{2="value"}": {
+		%{3="# code"}
+	}
+	default: {
+		%{4="# code"}
+	}
+}%{0}])

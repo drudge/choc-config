@@ -1,0 +1,8 @@
+(name [bdd - before each])
+
+(trigger
+    (tab be))
+
+(snippet [beforeEach(function(){
+  %{0}
+})])

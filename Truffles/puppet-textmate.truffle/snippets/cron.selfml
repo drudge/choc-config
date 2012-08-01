@@ -1,0 +1,10 @@
+(name cron)
+
+(trigger
+    (tab cron))
+
+(only-in source.puppet)
+
+(snippet [cron { "%{1="name"}":
+	%{2}
+}%{0}])

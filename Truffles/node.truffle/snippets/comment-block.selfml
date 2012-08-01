@@ -1,0 +1,10 @@
+(name [comment block])
+
+(trigger
+    (tab cb))
+
+(only-in source.js)
+
+(snippet [/**
+ * %{1="Description"}
+ */])

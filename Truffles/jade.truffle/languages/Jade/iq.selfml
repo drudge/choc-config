@@ -1,0 +1,7 @@
+(detector
+    (extension jade))
+
+(shell-variables
+    (TM_COMMENT_START [//- ]))
+
+(comment.line [//- ])

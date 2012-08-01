@@ -1,0 +1,10 @@
+(name [on()])
+
+(trigger
+    (tab on))
+
+(only-in source.js)
+
+(snippet [on('%{1="event"}', function(%{2}){
+	%{0}
+});])

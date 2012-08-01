@@ -1,0 +1,8 @@
+(name console.dir)
+
+(trigger
+    (tab d))
+
+(only-in source.js)
+
+(snippet [console.dir(%{0})])

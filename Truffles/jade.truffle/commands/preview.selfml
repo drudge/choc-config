@@ -1,0 +1,16 @@
+(trigger
+    (key [[ctrl][alt][cmd]P]))
+
+(name Preview)
+
+(only-in source.jade)
+
+(input document)
+
+(output html)
+
+(save nothing)
+
+(script [#!/usr/bin/env sh
+jade
+])

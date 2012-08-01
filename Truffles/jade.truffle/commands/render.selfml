@@ -1,0 +1,18 @@
+(trigger
+    (key [[cmd]B]))
+
+(name Render)
+
+(only-in source.jade)
+
+(input document)
+
+(output html)
+
+(save nothing)
+
+(script [#!/usr/bin/env sh
+echo "<pre style='font-family:Menlo; font-size: 12px; word-wrap: break-word;'>"
+jade | sed 's/</\&lt;/g' | sed 's/>/\&gt;/g'
+echo "</pre>"
+])

@@ -1,0 +1,12 @@
+(name [comment file])
+
+(trigger
+    (tab cf))
+
+(only-in source.js)
+
+(snippet [/*!
+ * %{1="Project Name"}
+ * Copyright(c) 2010 %{2="Author Name"} <%{3="Author Email"}>
+ * MIT Licensed
+ */])

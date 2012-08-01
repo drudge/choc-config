@@ -1,0 +1,10 @@
+(name [process.nextTick()])
+
+(trigger
+    (tab nt))
+
+(only-in source.js)
+
+(snippet [process.nextTick(function(){
+	%{0}
+});])

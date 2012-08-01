@@ -1,0 +1,8 @@
+(name [clearInterval()])
+
+(trigger
+    (tab ci))
+
+(only-in source.js)
+
+(snippet [clearInterval(%{1="id"})])

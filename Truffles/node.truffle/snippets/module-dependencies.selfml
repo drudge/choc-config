@@ -1,0 +1,12 @@
+(name [module dependencies])
+
+(trigger
+    (tab md))
+
+(only-in source.js)
+
+(snippet [/**
+ * Module dependencies.
+ */
+
+var %{1="name"} = require('%{2="module"}')])

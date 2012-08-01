@@ -1,0 +1,14 @@
+(name define)
+
+(trigger
+    (tab define))
+
+(only-in source.puppet)
+
+(snippet [# Define: %{1}
+# Parameters:
+# %{2}
+#
+define %{1="name"} (%{2="arguments"}) {
+	%{3="# puppet code"}
+}%{0}])

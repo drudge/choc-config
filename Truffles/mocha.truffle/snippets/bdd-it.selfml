@@ -1,0 +1,8 @@
+(name [bdd - it])
+
+(trigger
+    (tab it))
+
+(snippet [it('should %{1}', function(){
+  %{0}
+})])

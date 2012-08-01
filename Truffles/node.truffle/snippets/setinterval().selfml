@@ -1,0 +1,10 @@
+(name [setInterval()])
+
+(trigger
+    (tab si))
+
+(only-in source.js)
+
+(snippet [setInterval(function(){
+	%{0}
+}, %{1="ms"});])

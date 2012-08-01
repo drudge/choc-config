@@ -1,0 +1,10 @@
+(name group)
+
+(trigger
+    (tab group))
+
+(only-in source.puppet)
+
+(snippet [group { "%{1="name"}":
+	gid => %{2},
+}%{0}])

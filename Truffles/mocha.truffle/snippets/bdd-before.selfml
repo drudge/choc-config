@@ -1,0 +1,8 @@
+(name [bdd - before])
+
+(trigger
+    (tab b))
+
+(snippet [before(function(){
+  %{0}
+})])

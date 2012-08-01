@@ -1,0 +1,8 @@
+(name [Object.keys()])
+
+(trigger
+    (tab ok))
+
+(only-in source.js)
+
+(snippet [Object.keys(%{1="obj"})])

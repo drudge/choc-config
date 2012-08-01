@@ -1,0 +1,11 @@
+(name selector)
+
+(trigger
+    (tab ?))
+
+(only-in source.puppet)
+
+(snippet [$%{1="variable"} ? {
+	"%{2="key"}" => "%{3="value"}",
+	default => "%{4="value"}",
+}%{0}])

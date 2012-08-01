@@ -1,0 +1,12 @@
+(name exec)
+
+(trigger
+    (tab exec))
+
+(only-in source.puppet)
+
+(snippet [exec { "%{1="name"}":
+	command => "%{2="/bin/echo"}",
+	#path => "/usr/bin:/usr/sbin:/bin:/usr/local/bin",
+	#refreshonly => true,
+}%{0}])

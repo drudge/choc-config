@@ -1,0 +1,10 @@
+(name file)
+
+(trigger
+    (tab file))
+
+(only-in source.puppet)
+
+(snippet [file { "%{1="name"}":
+	ensure => %{2="file"},
+}%{0}])

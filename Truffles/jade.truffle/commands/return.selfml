@@ -1,0 +1,27 @@
+(trigger
+    (key [[enter]]))
+
+(name Return)
+
+(only-in source.jade)
+
+(input nothing)
+
+(output after-selected)
+
+(save nothing)
+
+(script [#!/usr/bin/env ruby
+
+line = ENV['TM_CURRENT_LINE']
+col = ENV['TM_LINE_INDEX'].to_i
+
+m = /^([ ]+\|[ ]*)/.match line
+
+if m and col >= m[1].length
+  $stdout.write "\n#{m[1]}"
+else
+  $stdout.write "\n" + /^([ ]*)/.match(line)[1]
+end
+
+])

@@ -1,0 +1,15 @@
+(name yumrepo)
+
+(trigger
+    (tab yumrepo))
+
+(only-in source.puppet)
+
+(snippet [yumrepo { "%{1="name"}":
+	baseurl => "%{2}",
+	descr => "%{3="The %{1} repository"}",
+	enabled => "%{4="1"}",
+	gpgcheck => "%{5="1"}",
+	gpgkey => "%{6="file:///etc/pki/rpm-gpg/RPM-GPG-KEY-%{1}"}",
+	mirrorlist => "%{7}"
+}%{0}])

@@ -1,0 +1,8 @@
+(name [throw new Error()])
+
+(trigger
+    (tab te))
+
+(only-in source.js)
+
+(snippet [throw new Error('%{1}');])
