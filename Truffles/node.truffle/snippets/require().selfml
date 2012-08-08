@@ -5,4 +5,4 @@
 
 (only-in source.js)
 
-(snippet [require('%{1="module"}')])
+(snippet [require('%{1="module"}')%{0}])

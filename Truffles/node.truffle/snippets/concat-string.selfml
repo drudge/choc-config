@@ -5,4 +5,4 @@
 
 (only-in [source.js string])
 
-(snippet [' + %{0} + '])
+(snippet [' + %{1} + '%{0}])
