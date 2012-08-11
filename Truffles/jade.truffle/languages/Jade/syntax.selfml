@@ -3,6 +3,14 @@
         (match
             (regex [^\s*\b(include)\b]
                 (1 keyword.control.import.include.jade))))
+    (zone
+        (match
+            (regex [^\s*\b(block)\b]
+                (1 keyword.control.import.block.jade))))
+    (zone
+        (match
+            (regex [^\s*\b(extends)\b]
+                (1 keyword.control.import.include.jade))))
     (zone keyword.other.doctype.jade
         (match
             (regex [^(!!!)(\s*[a-zA-Z0-9-_]+)?])))
@@ -66,7 +74,7 @@
         (match
             (regex [^\s*(mixin) ([\w\-]+)]
                 (1 storage.type.function.jade)
-                (2 entity.name.function.jade))))
+                (2 constant.name.function.jade))))
     (zone source.js.embedded.jade
         (start
             (regex [^\s*(-|=|!=)]))
@@ -81,7 +89,7 @@
     (zone source.js.embedded.jade
         (start
             (regex [^(\s*)(script)]
-                (2 entity.name.tag.script.jade)))
+                (2 constant.name.tag.script.jade)))
         (end
             (regex [^((?=(\1)([\w#\.]|$\n?))|^$\n?)]))
         (subzones
@@ -100,11 +108,11 @@
         (start
             (regex [^\s*(?!\w+\:)(?:(([\w]+))|(?=\.|#))]
                 (1 meta.tag.any.jade)
-                (2 entity.name.tag.jade)))
+                (2 constant.name.tag.jade)))
         (end
             (regex [$|(?!\.|#|=|-)]
                 (1 meta.tag.any.jade)
-                (2 entity.name.tag.jade)))
+                (2 constant.name.tag.jade)))
         (subzones
             (zone meta.tag.attribute.class.jade
                 (match
