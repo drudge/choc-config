@@ -1,0 +1,4 @@
+{
+  "lint": ["gister.js"],
+  "test": ["test/koala.js"]
+}
