@@ -51,8 +51,8 @@ function showLoginWindow() {
     }
     
     loginWindow.applyFunction(function() {
-      var un = document.getElementById("username");
-      var pw = document.getElementById("password");
+      var un = document.getElementById("username").value;
+      var pw = document.getElementById("password").value;
       chocolat.applyFunction("saveCredentials", [un, pw]);
     }, []);    
   };
