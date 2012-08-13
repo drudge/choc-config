@@ -1,6 +1,10 @@
 var Gister = require('gister')
   , keychain = require('keychain');
 
+/**
+ * Hook up menu items.
+ */
+
 Hooks.addMenuItem('Actions/Gist/Public Gist Current Document', 'control-shift-g', function() {
   keychain.getPassword({ account: 'drudge', service: 'Chocolat Gist Plugin' }, function(err, pass) {
     if (!pass) {
@@ -37,30 +41,30 @@ function saveCredentials(user) {
 }
 
 function showLoginWindow() {
-  var loginWindow = new Window();
+  var win = new Window();
   
-  loginWindow.title = 'Login to Gist';
-  loginWindow.useDefaultCSS = false;
-  loginWindow.htmlPath = 'login.html';
-  loginWindow.buttons = [ 'Login', 'Cancel' ];
-  loginWindow.setFrame({x: 0, y: 0, width: 259, height: 211}, true);
-  loginWindow.onButtonClick = function(title) {
+  win.title = 'Login to Gist';
+  win.useDefaultCSS = false;
+  win.htmlPath = 'login.html';
+  win.buttons = [ 'Login', 'Cancel' ];
+  win.setFrame({x: 0, y: 0, width: 259, height: 211}, true);
+  win.onButtonClick = function(title) {
     if (title == 'Cancel') {
-      loginWindow.close();
+      win.close();
       return;
     }
     
-    loginWindow.applyFunction(function() {
+    win.applyFunction(function() {
       var un = document.getElementById("username").value;
       var pw = document.getElementById("password").value;
       chocolat.applyFunction("saveCredentials", [un, pw]);
-    }, []);    
+    }, []);
   };
-  loginWindow.onLoad = function() {
-   loginWindow.applyFunction(function (data) { 
-     document.getElementById('username').focus();
-   }, []);
+  win.onLoad = function() {
+    win.applyFunction(function (data) {
+      document.getElementById('username').focus();
+    }, []);
   };
   
-  loginWindow.run(); 
+  win.run();
 }

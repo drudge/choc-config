@@ -10,6 +10,10 @@
 
 var ghm = require("github-flavored-markdown")
 
+/**
+* Hook up menu items.
+*/
+
 //TODO: This seems to create a duplicate Markdown menu item. The first time it adds the 
 //      item to the new menu, all subsequent reloads put it under the existing one.
 Hooks.addMenuItem('Actions/Markdown/Preview Github Flavored Markdown', 'cmd-alt-p', function() {
@@ -34,7 +38,6 @@ Hooks.addMenuItem('Actions/Markdown/Preview Github Flavored Markdown', 'cmd-alt-
     }, [html]);
   }
   
-  //TODO: I rather set a size, this doesn't seem to work
-  win.setFrame({x: 0, y: 0, width: 750, height: 750}, true);
+  win.setFrame({x: 0, y: 0, width: 750, height: 750}, false);
   win.center();
 });
