@@ -8,15 +8,7 @@
  * Hook up menu items.
  */
 
-
-process.on('uncaughtException', function(err) {
-  Alert.show('Javascript Exception', err.message, ['Dammit.']);
-});
-
-
-try {
 Hooks.addMenuItem('Text/Lines/Strip Trailing Whitespace', 'control-shift-w', function() {
-   console.log(bar);
   Recipe.run(function(recipe) {
     var sel = (!recipe.selection.length)? new Range(0, recipe.length) : recipe.selection;
     recipe.eachLine(sel, function(marker) {
@@ -24,7 +16,3 @@ Hooks.addMenuItem('Text/Lines/Strip Trailing Whitespace', 'control-shift-w', fun
     });
   });
 });
-} catch (e) {
-  Alert.show('Javascript Exception', e.message, ['Dammit.']);
-
-}
