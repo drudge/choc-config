@@ -1,3 +1,7 @@
+/**
+ * Module dependencies.
+ */
+
 var Gister = require('gister')
   , keychain = require('keychain');
 
@@ -36,9 +40,24 @@ Hooks.addMenuItem('Actions/Gist/Public Gist Current Document', 'control-shift-g'
   showLoginWindow();
 });
 
-function saveCredentials(user) {
+/**
+ * Save the username in the global storage and password in the keychain.
+ *
+ * @param {String} user
+ * @param {String} pass
+ * @param {Function} fn
+ * @api private
+ */
+ 
+function saveCredentials(user, pass, fn) {
   Alert.show('Thing', 'other thing', ['OK']);
 }
+
+/**
+ * Show the gist login window.
+ *
+ * @api private
+ */
 
 function showLoginWindow() {
   var win = new Window();
