@@ -1,0 +1,16 @@
+body {
+  padding:20px;
+  background-color: #dedede;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  overflow: hidden;
+}
+
+label {
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+img.gist-logo {
+  width: 150px;
+}
