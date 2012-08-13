@@ -26,6 +26,7 @@ Hooks.addMenuItem('Actions/Transmit/Send File With Active Connection', 'control-
 
   // Make sure we have a file to send
   if (!filePath) {
+    Alert.beep();
     Alert.show('Could not Send File', 'Please make sure you have saved the file before you attempt to send it.', [ 'OK' ]);
     return;
   }    
@@ -44,9 +45,10 @@ Hooks.addMenuItem('Actions/Transmit/Send Document (DockSend)', 'control-shift-f'
 
   // Make sure we have a file to send
   if (!filePath) {
+    Alert.beep();
     Alert.show('Could not Send Document', 'Please make sure you have saved the document before you attempt to send it.', [ 'OK' ]);
     return;
   }    
-
-  var osa = spawn('/usr/bin/osascript', [ '-e', script ]);      
+  
+  var osa = spawn('/usr/bin/osascript', [ '-e', script ]);
 });
