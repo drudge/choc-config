@@ -18,8 +18,7 @@ Hooks.addMenuItem('Actions/Markdown/Preview Github Flavored Markdown', 'cmd-alt-
     , html = "";
     
   if (doc.rootScope() !== 'html.markdown.text') {
-    //TODO: I rather just beep here
-    //Alert.show("Incorrect Document Format", fileName + ' is not a Markdown document.', ["OK"]);
+    Alert.beep();
     return;
   }
   
@@ -36,7 +35,6 @@ Hooks.addMenuItem('Actions/Markdown/Preview Github Flavored Markdown', 'cmd-alt-
   }
   
   //TODO: I rather set a size, this doesn't seem to work
-  //win.setFrame({x: 0, y: 0, width: 950, height: 900}, true);
-  //win.center();
-  win.maximize();
+  win.setFrame({x: 0, y: 0, width: 750, height: 750}, true);
+  win.center();
 });

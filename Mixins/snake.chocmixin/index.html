@@ -1,0 +1,107 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Snake in Javascript</title>
+<meta name="description" content="Welcome to the Javascript version of Snake written by Saurabh Odhyan">
+<meta name="keywords" content="javascript, yui, yui 2, snake, game, games, saurabh, odhyan">
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.1/build/container/assets/skins/sam/container.css">
+<style>
+body {
+    background-color:#EEF3E2;
+    margin:0;
+    padding:0;
+    font:13px arial;
+}
+#arena {
+    border:1px solid #000;
+    width:644px;
+    height:444px;
+    margin:20px 0 0 24px;
+    float:left;
+}
+#info {
+    float:left;
+    margin:20px 0 0 40px;
+}
+#info ul {
+    margin-left:0;
+    padding-left:16px;
+}
+#info #title {
+    color:#228B22;
+    font-size:20px;
+}
+#info #instructions ul#colorCodes {
+    padding:0;
+}
+#info #instructions #colorCodes li {
+    list-style-type:none;
+}
+#info #instructions #colorCodes span {
+    width:14px;
+    height:12px;
+    display:inline-block;
+    color:#FFF;
+    margin-right:4px;
+}
+#info #instructions #colorCodes span.foodColor {
+    background-color:#228B22;
+}
+#info #instructions #colorCodes span.bonusColor {
+    background-color:#FFB90F;
+}
+#info #score {
+    border:0px solid #000;
+    width:100px;
+    height:20px;
+    margin-top:20px;
+    color:#8B4513;
+    font-weight:bold;
+    font-size:15px;
+}
+#info #addninfo {
+    margin-top:20px;
+    font-size:12px;
+    font-style:italic;
+}
+.cell {
+    border:0px solid #000;
+    width:14px;
+    height:12px;
+    background-color: #FFF;
+    float:left;
+}   
+.clear {
+    clear:both;
+}
+</style>
+<script src="http://yui.yahooapis.com/2.8.1/build/yahoo-dom-event/yahoo-dom-event.js"></script>
+<script src="http://yui.yahooapis.com/2.8.1/build/container/container-min.js"></script>
+<script src="snake.js"></script>
+</head>
+<body class="yui-skin-sam">
+    <div id="wrapper">
+        <div id="arena"></div>
+        <div id="info">
+            <div id="title">SNAKE</div>
+            <div id="score">Score: <i>0</i></div>
+            <div id="instructions">
+                <ul>
+                    <li>Press ARROW keys to move the snake.</li>
+                    <li>Press P to pause or resume.</li>
+                    <li>Earlier you eat the food, more points you get.</li>
+                    <li>Snake gets killed if it collides with the walls or its own body.</li>
+                    <li>Color codes:
+                        <ul id=colorCodes>
+                            <li><span class=foodColor></span>Food (Max 250 points, length increases by 4 units)</li>
+                            <li><span class=bonusColor></span>Bonus (500 points, disappears if not eaten within 10 seconds)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</body>
+</html>
