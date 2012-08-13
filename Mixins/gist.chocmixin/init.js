@@ -35,14 +35,18 @@ function showLoginWindow() {
  loginWindow.useDefaultCSS = false;
  loginWindow.htmlPath = 'login.html';
  loginWindow.buttons = [ 'Login', 'Cancel' ];
+ loginWindow.setFrame({x: 0, y: 0, width: 259, height: 211}, true);
  loginWindow.onButtonClick = function(title) {
    if (title == 'Cancel') {
      loginWindow.close();
      return;
    }
-
-   return;
- };  
+ };
+ loginWindow.onLoad = function() {
+   loginWindow.applyFunction(function (data) { 
+     document.getElementById('username').focus();
+   }, []);
+};
 
  loginWindow.run(); 
 }
