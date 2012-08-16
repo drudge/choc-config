@@ -1,0 +1,17 @@
+(name [comment-constructor])
+
+(trigger
+    (tab cc))
+
+(only-in source.js)
+
+(snippet [/**
+ * Creates an instance of %{1="Class"}.
+ *
+ * @constructor
+ * @this {%{2="Class"}}
+ * @param {%{3="Type"}} %{4="name"}
+ * @api %{5="public"}
+ */
+
+ %{0}])

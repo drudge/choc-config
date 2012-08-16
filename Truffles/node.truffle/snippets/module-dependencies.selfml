@@ -9,4 +9,4 @@
  * Module dependencies.
  */
 
-var %{1="name"} = require('%{2="module"}')])
+var %{1="name"} = require('%{2="module"}')%{0}])
