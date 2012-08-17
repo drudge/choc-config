@@ -120,9 +120,9 @@
     (bold)
     (color [rgba(0.000000, 0.000000, 0.000000, 0.550000)]))
 
-(apply [html.markdown.text inline.markdown.markup.raw]
+(apply [html.markdown.text markdown.markup.raw]
     [Markdown Raw]
-    (color [rgba(1.000000, 0.000000, 0.501961, 0.670000)]))
+    (color [rgba(0.569356, 0.093745, 0.554583, 0.640000)]))
 
 (apply [html.markdown.text heading.markdown.markup definition.heading.markdown.punctuation]
     [Markdown Header Punctuation]
