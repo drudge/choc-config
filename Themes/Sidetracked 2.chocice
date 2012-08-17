@@ -114,3 +114,54 @@
 (apply [source.plist string.unquoted, source.plist keyword.operator]
     [PList unquoted string]
     (color [rgba(1.000000, 1.000000, 1.000000, 1.000000)]))
+
+(apply [html.markdown.text definition.list_item.markdown.punctuation]
+    [Markdown List Punctuation]
+    (bold)
+    (color [rgba(0.000000, 0.000000, 0.000000, 0.550000)]))
+
+(apply [html.markdown.text inline.markdown.markup.raw]
+    [Markdown Raw]
+    (color [rgba(1.000000, 0.000000, 0.501961, 0.670000)]))
+
+(apply [html.markdown.text heading.markdown.markup definition.heading.markdown.punctuation]
+    [Markdown Header Punctuation]
+    (bold)
+    (color [rgba(0.000000, 0.000000, 0.000000, 0.550000)]))
+
+(apply [html.markdown.text heading.markdown.markup]
+    [Markdown Header]
+    (bold)
+    (color [rgba(0.396078, 0.541176, 0.686275, 1.000000)]))
+
+(apply [html.markdown.text link.markdown.markup]
+    [Markdown Link]
+    (underline)
+    (color [rgba(0.441397, 0.573910, 0.948793, 1.000000)]))
+
+(apply bold
+    (bold))
+
+(apply italic
+    (italic))
+
+(apply underline
+    (underline))
+
+(apply bold
+    (bold))
+
+(apply italic
+    (italic))
+
+(apply underline
+    (underline))
+
+(apply bold
+    (bold))
+
+(apply italic
+    (italic))
+
+(apply underline
+    (underline))
