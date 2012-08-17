@@ -1,0 +1,15 @@
+[submodule "Mixins/strip-trailing-whitespace.chocmixin"]
+	path = Mixins/strip-trailing-whitespace.chocmixin
+	url = git@github.com:drudge/strip-trailing-whitespace.chocmixin.git
+[submodule "Mixins/github-flavored-markdown.chocmixin"]
+	path = Mixins/github-flavored-markdown.chocmixin
+	url = git@github.com:drudge/github-flavored-markdown.chocmixin.git
+[submodule "Mixins/transmit.chocmixin"]
+	path = Mixins/transmit.chocmixin
+	url = git@github.com:drudge/transmit.chocmixin.git
+[submodule "Mixins/javascript-tools.chocmixin"]
+	path = Mixins/javascript-tools.chocmixin
+	url = git@github.com:drudge/javascript-tools.chocmixin.git
+[submodule "Mixins/zap-gremlins.chocmixin"]
+	path = Mixins/zap-gremlins.chocmixin
+	url = git@github.com:drudge/zap-gremlins.chocmixin.git
