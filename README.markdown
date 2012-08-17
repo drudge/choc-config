@@ -6,6 +6,8 @@
 
 ```bash
 git clone https://github.com/drudge/choc-config.git ~/Library/Application\ Support/Chocolat
+cd ~/Library/Application\ Support/Chocolat
+git submodule update --init
 ```
 
 ### Node.js Completions
