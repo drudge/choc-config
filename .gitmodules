@@ -13,3 +13,6 @@
 [submodule "Mixins/zap-gremlins.chocmixin"]
 	path = Mixins/zap-gremlins.chocmixin
 	url = git@github.com:drudge/zap-gremlins.chocmixin.git
+[submodule "Mixins/gist.chocmixin"]
+	path = Mixins/gist.chocmixin
+	url = https://github.com/drudge/gist.chocmixin.git
