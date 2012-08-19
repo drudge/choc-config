@@ -1,8 +1,0 @@
-(name [clearTimeout()])
-
-(trigger
-    (tab ct))
-
-(only-in source.js)
-
-(snippet [clearTimeout(%{1="id"})])

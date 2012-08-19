@@ -1,8 +1,0 @@
-(name [console.error()])
-
-(trigger
-    (tab e))
-
-(only-in source.js)
-
-(snippet [console.error(%{0});])

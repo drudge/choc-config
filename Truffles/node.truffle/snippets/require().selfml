@@ -1,8 +1,0 @@
-(name [require()])
-
-(trigger
-    (tab r))
-
-(only-in source.js)
-
-(snippet [require('%{1="module"}')%{0}])

@@ -5,9 +5,7 @@
 ### Using Git
 
 ```bash
-git clone https://github.com/drudge/choc-config.git ~/Library/Application\ Support/Chocolat
-cd ~/Library/Application\ Support/Chocolat
-git submodule update --init
+git clone https://github.com/drudge/choc-config.git ~/Library/Application\ Support/Chocolat --recursive
 ```
 
 ### Node.js Completions

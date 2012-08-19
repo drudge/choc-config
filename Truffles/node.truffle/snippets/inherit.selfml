@@ -1,8 +1,0 @@
-(name inherit)
-
-(trigger
-    (tab in))
-
-(only-in source.js)
-
-(snippet [%{1}.prototype.__proto__ = %{2}.prototype;])
