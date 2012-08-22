@@ -233,3 +233,12 @@
 
 (apply underline
     (underline))
+
+(apply bold
+    (bold))
+
+(apply italic
+    (italic))
+
+(apply underline
+    (underline))
