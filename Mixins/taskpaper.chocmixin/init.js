@@ -8,13 +8,18 @@ Hooks.addKeyboardShortcut("cmd-d", function() {
   }
   
   Recipe.run(function(recipe) {
-    if (!recipe.selection.length) return;
+    var sel = recipe.selection;
+    if (!sel.length) {
+      sel = recipe.contentRangeOfLinesInRange(sel);
+    };
     
-    recipe.eachLine(recipe.selection, function(marker) {
-      if (/^(\s*-.*)(\({1}@done.*\){1}|[^\(]@done.*).*$/.test(marker.text.replace('\n', '')) === false) {
+    recipe.eachLine(sel, function(marker) {
+      if (/^(\s*-.*)(\({1}@done.*\){1}|[^\(]@done.*).*$/.test(marker.text) === false) {
         return marker.text.replace(/^(.*)$/, "$1 @done");
-      } else {
+      } else if(/^\s+?-.*$/.test(marker.text)) {
         return marker.text.replace(/^(\s*-.*)(\({1}@done.*\){1}|[^\(]@done.*).*$/, "$1");
+      } else {
+        return undefined;
       }
     });
   });
