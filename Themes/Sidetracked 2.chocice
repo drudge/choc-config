@@ -144,6 +144,10 @@
     (bold)
     (color [rgba(0.396078, 0.541176, 0.686275, 1.000000)]))
 
+(apply [header.meta.tasks definition.punctuation]
+    [Taskpaper Header Punctuation]
+    (color [rgba(0.000000, 0.000000, 0.000000, 0.480000)]))
+
 (apply meta.pending.task.taskpaper.tasks
     [Taskpaper Task]
     (color [rgba(1.000000, 1.000000, 1.000000, 1.000000)]))
@@ -151,6 +155,11 @@
 (apply plain.tasks.text
     [Taskpaper Text]
     (color [rgba(0.713648, 0.713648, 0.713648, 1.000000)]))
+
+(apply link.markup.taskpaper
+    [Taskpaper Link]
+    (underline)
+    (color [rgba(0.441397, 0.573910, 0.948793, 1.000000)]))
 
 (apply completed.meta.task.taskpaper.tasks
     [Taskpaper Completed Task]
@@ -161,11 +170,33 @@
 (apply done-tag.meta.tasks
     [Taskpaper Done Tag]
     (italic)
-    (color [rgba(0.310790, 0.352395, 0.420779, 1.000000)]))
+    (color [rgba(0.240767, 0.327993, 0.419603, 1.000000)]))
+
+(apply meta.optional-tag.task.taskpaper
+    [Taskpaper Optional Tag]
+    (color [rgba(0.643137, 0.760784, 0.380392, 1.000000)]))
 
 (apply bullet.definition.punctuation.tasks
     [Taskpaper Task Punctuation]
     (color [rgba(0.000000, 0.000000, 0.000000, 0.550000)]))
+
+(apply bold
+    (bold))
+
+(apply italic
+    (italic))
+
+(apply underline
+    (underline))
+
+(apply bold
+    (bold))
+
+(apply italic
+    (italic))
+
+(apply underline
+    (underline))
 
 (apply bold
     (bold))
