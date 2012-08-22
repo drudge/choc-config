@@ -1,0 +1,33 @@
+(trigger
+    (key [[cancel]]))
+
+(name [New Task])
+
+(only-in text.plain.tasks)
+
+(input document)
+
+(output snippet)
+
+(save nothing)
+
+(script [#!/usr/bin/env ruby
+line = ENV['TM_CURRENT_LINE'].rstrip
+column = ENV['TM_LINE_INDEX'].to_i
+line_is_empty   = line.strip.empty?
+start_of_row = !line_is_empty && column==0
+initial_whitespace = line[/^\s*/]
+in_leading_whitespace  = (column <= initial_whitespace.length)
+in_trailing_whitespace = (column >= line.length)
+in_whitespace = in_leading_whitespace || in_trailing_whitespace
+
+print "\n" if !in_leading_whitespace
+print initial_whitespace[column..-1] if in_leading_whitespace
+
+# If the caret is within the line text (not leading/trailing whitespace)
+# then don't offer a placeholder: we assume the user wants to break the list.
+placeholder = in_whitespace ? "item" : nil
+print "- ${0:#{placeholder}}"
+
+print "\n" if !line_is_empty && in_leading_whitespace
+])

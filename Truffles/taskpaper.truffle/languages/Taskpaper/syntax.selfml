@@ -1,0 +1,33 @@
+(root text.plain.tasks
+    (include @link)
+    (zone meta.task.completed.tasks
+        (match
+            (regex [^(\s*)(-).*(\({1}@done.*\){1}|[^\(]@done.*).*$]
+                (3 meta.tasks.done-tag)
+                (1 meta.leading-whitespace.tasks)
+                (2 punctuation.definition.bullet.tasks))))
+    (zone meta.task.pending.tasks
+        (start
+            (regex [^(\s*)(-)]
+                (1 meta.leading-whitespace.tasks)
+                (2 punctuation.definition.bullet.tasks)))
+        (end
+            (regex $\n?
+                (1 meta.leading-whitespace.tasks)
+                (2 punctuation.definition.bullet.tasks)))
+        (subzones
+            (zone meta.task.optional-tag
+                (match
+                    (regex @\S+)))))
+    (zone meta.header-line.tasks
+        (match
+            (regex [^(\s*)((.+)(:)\s*$\n?)]
+                (3 meta.toc-list.tasks)
+                (4 punctuation.definition.separator.tasks)
+                (1 meta.leading-whitespace.tasks)
+                (2 meta.header.tasks)))))
+
+(collection link
+    (zone markup.underline.link
+        (match
+            (regex [(https?|ftp|mailto):\S+?(?=[)>,.':;"]*(\s|$)|$)]))))

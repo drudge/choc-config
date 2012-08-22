@@ -1,0 +1,27 @@
+(apply [meta.task.completed.tasks punctuation.definition.bullet]
+    [Style: Completed symbol]
+    (color 73FF65))
+
+(apply meta.task.completed.tasks
+    [Style: Completed]
+    (color 888888)
+    (italic)
+    (strikethrough))
+
+(apply [meta.task.completed.tasks meta.tasks.done-tag]
+    [Style: Done tag]
+    (color 73FF65))
+
+(apply meta.header.tasks
+    [Style: Header]
+    (color FFFFFF)
+    (background 3467D1))
+
+(apply meta.task.optional-tag
+    [Style: Optional tag]
+    (color ffea00)
+    (italic))
+
+(apply [meta.task.pending.tasks punctuation.definition.bullet]
+    [Style: Pending symbol]
+    (color ffea00))

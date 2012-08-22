@@ -10,7 +10,7 @@
 
 (apply comment
     Comment
-    (color [rgba(0.415686, 0.352941, 0.235294, 0.870588)]))
+    (color [rgba(0.415686, 0.352941, 0.235294, 1.000000)]))
 
 (apply constant
     Constant
@@ -138,6 +138,43 @@
     [Markdown Link]
     (underline)
     (color [rgba(0.441397, 0.573910, 0.948793, 1.000000)]))
+
+(apply [header-line.meta.taskpaper.tasks meta.tasks.toc-list header.meta.tasks]
+    [Taskpaper Header]
+    (bold)
+    (color [rgba(0.396078, 0.541176, 0.686275, 1.000000)]))
+
+(apply meta.pending.task.taskpaper.tasks
+    [Taskpaper Task]
+    (color [rgba(1.000000, 1.000000, 1.000000, 1.000000)]))
+
+(apply plain.tasks.text
+    [Taskpaper Text]
+    (color [rgba(0.713648, 0.713648, 0.713648, 1.000000)]))
+
+(apply completed.meta.task.taskpaper.tasks
+    [Taskpaper Completed Task]
+    (italic)
+    (strikethrough)
+    (color [rgba(0.000000, 0.000000, 0.000000, 0.550000)]))
+
+(apply done-tag.meta.tasks
+    [Taskpaper Done Tag]
+    (italic)
+    (color [rgba(0.310790, 0.352395, 0.420779, 1.000000)]))
+
+(apply bullet.definition.punctuation.tasks
+    [Taskpaper Task Punctuation]
+    (color [rgba(0.000000, 0.000000, 0.000000, 0.550000)]))
+
+(apply bold
+    (bold))
+
+(apply italic
+    (italic))
+
+(apply underline
+    (underline))
 
 (apply bold
     (bold))
