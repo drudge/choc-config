@@ -1,0 +1,8 @@
+(name [@done])
+
+(trigger
+    (tab @d))
+
+(only-in plain.tasks.text)
+
+(snippet [@done%{0}])

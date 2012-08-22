@@ -6,6 +6,8 @@
                 (3 meta.tasks.done-tag)
                 (1 meta.leading-whitespace.tasks)
                 (2 punctuation.definition.bullet.tasks))))
+        (subzones
+            (include @link))
     (zone meta.task.pending.tasks
         (start
             (regex [^(\s*)(-)]
@@ -19,13 +21,13 @@
             (zone meta.task.optional-tag
                 (match
                     (regex @\S+)))))
+            (include @link)
     (zone meta.header-line.tasks
         (match
-            (regex [^(\s*)((.+)(:)\s*$\n?)]
-                (3 meta.toc-list.tasks)
-                (4 punctuation.definition.separator.tasks)
-                (1 meta.leading-whitespace.tasks)
-                (2 meta.header.tasks)))))
+            (regex [^((.+)(:)\s*$\n?)]
+                (2 meta.toc-list.tasks)
+                (3 punctuation.definition.separator.tasks)
+                (1 meta.header.tasks)))))
 
 (collection link
     (zone markup.underline.link

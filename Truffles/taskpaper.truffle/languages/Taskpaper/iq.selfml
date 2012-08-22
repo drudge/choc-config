@@ -1,14 +1,9 @@
 (detector
+    (extension taskpaper)
     (extension todo)
     (extension tasks)
-    (extension todolist)
-    (extension taskpaper))
+    (extension todolist))
 
-(in meta.task.pending.tasks)
-
-(in meta.header-line.tasks
-    (symbol-list
-        (transformation s/:\s*$//)))
-
-(in meta.task
-    (symbol-list))
+(pair [(]
+    [)]
+    (smart-typing))

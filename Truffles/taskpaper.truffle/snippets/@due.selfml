@@ -1,0 +1,8 @@
+(name [due])
+
+(trigger
+    (tab @du)
+
+(only-in plain.tasks.text)
+
+(snippet [@due(%{1="YYYY-MM-DD}")%{0}])
