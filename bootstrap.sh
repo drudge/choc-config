@@ -1,26 +1,45 @@
 #!/bin/sh
 
-CHOCOLAT_APP=/Applications/Chocolat.app/
-APP_SUPPORT=$HOME/Library/Application\ Support/Chocolat
-PREF_DOMAIN=com.chocolatapp.Chocolat
+REPO="https://github.com/drudge/choc-config.git"
+CHOCOLAT_APP="/Applications/Chocolat.app"
+APP_SUPPORT="$HOME/Library/Application Support/Chocolat"
+PREF_DOMAIN="com.chocolatapp.Chocolat"
 
-if [ -d $APP_SUPPORT ]; then
-  
+echo ''
+echo "  drudge's tasty"
+echo '     ______ __                         __        __ '
+echo '    / ____// /_   ____   _____ ____   / /____ _ / /_'
+echo '   / /    / __ \ / __ \ / ___// __ \ / // __ `// __/'
+echo '  / /___ / / / // /_/ // /__ / /_/ // // /_/ // /_ ' 
+echo '  \____//_/ /_/ \____/ \___/ \____//_/ \__,_/ \__/'
+echo '                                      config'
+echo ''
+
+if [ -e "$APP_SUPPORT" ]; then
+  read -p "$APP_SUPPORT exists, do you want to overwrite? [y/n] " -n 1
+  if [[ $REPLY =~ ^[Yy]$ ]];then
+     rm -Rf "$APP_SUPPORT"
+  else
+    echo ""
+    echo "Aborted bootstrap of $APP_SUPPORT"
+    exit 1
+  fi
 fi
 
+echo ''
 echo "Cloning configuration..."
 
-git clone https://github.com/drudge/choc-config.git $APP_SUPPORT  --recursive
+git clone $REPO "$APP_SUPPORT" --recursive --quiet
 
-echo "Linking completions.json..."
+echo "Linking completions..."
 
-rm $CHOCOLAT_APP/Contents/Resources/completions.json
-ln -s $APP_SUPPORT/completions.json $CHOCOLAT_APP/Contents/Resources/completions.json
+rm "$CHOCOLAT_APP/Contents/Resources/completions.json"
+ln -s "$APP_SUPPORT/completions.json" "$CHOCOLAT_APP/Contents/Resources/completions.json"
 
-echo "Linking templates.json..."
+echo "Linking templates..."
 
-rm $CHOCOLAT_APP/Contents/Resources/boilerplate.json
-ln -s $APP_SUPPORT/boilerplate.json $CHOCOLAT_APP/Contents/Resources/boilerplate.json
+rm "$CHOCOLAT_APP/Contents/Resources/boilerplate.json"
+ln -s "$APP_SUPPORT/boilerplate.json" "$CHOCOLAT_APP/Contents/Resources/boilerplate.json"
 
 echo "Setting up preferences..."
 
