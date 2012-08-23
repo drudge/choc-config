@@ -1,6 +1,12 @@
-# drudge’s Chocolat Support
+# drudge’s tasty Chocolat config
 
 ## Installation
+
+### One-liner
+
+```bash
+curl https://raw.github.com/drudge/choc-config/master/bootstrap.sh | sh
+```
 
 ### Using Git
 
@@ -8,7 +14,7 @@
 git clone https://github.com/drudge/choc-config.git ~/Library/Application\ Support/Chocolat --recursive
 ```
 
-### Node.js Completions
+**Node.js Completions**
 
 ```bash
 CHOCOLAT_APP=/Applications/Chocolat.app/
@@ -16,7 +22,7 @@ rm $CHOCOLAT_APP/Contents/Resources/completions.json
 ln -s ~/Library/Application\ Support/Chocolat/completions.json $CHOCOLAT_APP/Contents/Resources/completions.json
 ```
 
-### Node.js Templates
+**Node.js Templates**
 
 ```bash
 CHOCOLAT_APP=/Applications/Chocolat.app/
