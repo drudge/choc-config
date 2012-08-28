@@ -37,3 +37,6 @@
 [submodule "Truffles/node.truffle"]
 	path = Truffles/node.truffle
 	url = git@github.com:drudge/node.truffle.git
+[submodule "Mixins/jshint.chocmixin"]
+	path = Mixins/jshint.chocmixin
+	url = git://github.com/derekr/jshint.chocmixin.git
