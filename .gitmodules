@@ -40,3 +40,6 @@
 [submodule "Mixins/jshint.chocmixin"]
 	path = Mixins/jshint.chocmixin
 	url = git://github.com/derekr/jshint.chocmixin.git
+[submodule "Mixins/prefixr.chocmixin"]
+	path = Mixins/prefixr.chocmixin
+	url = git@github.com:drudge/prefixr.chocmixin.git
