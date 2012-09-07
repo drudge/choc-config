@@ -1,0 +1,27 @@
+/**
+ * Module dependencies.
+ */
+
+var locomotive = require('locomotive');
+
+/**
+ * Create `{{name}}`.
+ */
+
+var {{name}} = new locomotive.Controller();
+
+/**
+ * Controller actions.
+ */
+
+{{name}}.index = function() {
+  {{#repo}}this.title = '{{title}}';{{/repo}}{{^repo}}this.title = '{{name}}#index';{{/repo}}
+  
+  this.render();
+}
+
+/**
+ * Expose `{{name}}`.
+ */
+
+module.exports = {{name}};

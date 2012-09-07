@@ -1,0 +1,17 @@
+{
+  "displayname": "Locomotive Controller",
+  "fields": [
+    {
+      "type": "text",
+      "name": "name",
+      "label": "Controller Name"
+    },
+    {
+      "optional": true,
+      "type": "text",
+      "name": "title",
+      "label": "Title"
+    }
+  ]
+}
+

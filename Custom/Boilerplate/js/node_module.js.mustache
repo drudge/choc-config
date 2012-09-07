@@ -1,0 +1,17 @@
+/**
+ * Initialize a new `{{classname}}` with `options`.
+ */
+
+function {{classname}}(options) {
+  {{#superclassname}}{{superclassname}}.call(this);{{/superclassname}}
+}
+
+{{#methodname}}{{classname}}.prototype.{{methodname}} = function() {
+  // TODO: implement {{methodname}} here.
+}{{/methodname}}
+
+/**
+ * Expose `{{classname}}`.
+ */
+
+module.exports = {{classname}};

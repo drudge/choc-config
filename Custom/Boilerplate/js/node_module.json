@@ -1,0 +1,23 @@
+{
+  "displayname": "Node Module",
+  "fields": [
+    {
+      "type": "text",
+      "name": "classname",
+      "label": "Class Name"
+    },
+    {
+      "optional": true,
+      "type": "text",
+      "name": "superclassname",
+      "label": "Parent Class"
+    },
+    {
+      "optional": true,
+      "type": "text",
+      "name": "methodname",
+      "label": "Method Name"
+    }
+  ]
+}
+
