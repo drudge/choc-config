@@ -43,3 +43,6 @@
 [submodule "Mixins/prefixr.chocmixin"]
 	path = Mixins/prefixr.chocmixin
 	url = git@github.com:drudge/prefixr.chocmixin.git
+[submodule "Mixins/pastie.chocmixin"]
+	path = Mixins/pastie.chocmixin
+	url = git@github.com:drudge/pastie.chocmixin.git
