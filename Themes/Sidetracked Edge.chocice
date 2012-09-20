@@ -242,3 +242,28 @@
 
 (apply underline
     (underline))
+
+(apply bold
+    (bold))
+
+(apply italic
+    (italic))
+
+(apply underline
+    (underline))
+
+(apply [diff.inserted.markup, diff.punctuation.to-file]
+    [Diff Inserted]
+    (color [rgba(0.643137, 0.760784, 0.380392, 0.750000)]))
+
+(apply [deleted.diff, diff.punctuation.from-file]
+    [Diff Deleted]
+    (color [rgba(0.670588, 0.164706, 0.113725, 0.750000)]))
+
+(apply diff.source
+    [Diff Main]
+    (color [rgba(0.298039, 0.298039, 0.298039, 1.000000)]))
+
+(apply [diff.header, diff.meta.range]
+    [Diff Header]
+    (color [rgba(0.701961, 0.701961, 0.701961, 1.000000)]))
