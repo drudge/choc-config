@@ -31,15 +31,7 @@ echo "Cloning configuration..."
 
 git clone $REPO "$APP_SUPPORT" --recursive --quiet
 
-echo "Linking completions..."
-
-rm "$CHOCOLAT_APP/Contents/Resources/completions.json"
-ln -s "$APP_SUPPORT/completions.json" "$CHOCOLAT_APP/Contents/Resources/completions.json"
-
-echo "Linking templates..."
-
-rm "$CHOCOLAT_APP/Contents/Resources/boilerplate.json"
-ln -s "$APP_SUPPORT/boilerplate.json" "$CHOCOLAT_APP/Contents/Resources/boilerplate.json"
+source update-links.sh
 
 echo "Setting up preferences..."
 
