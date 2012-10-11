@@ -10,7 +10,7 @@ echo "  drudge's tasty"
 echo '     ______ __                         __        __ '
 echo '    / ____// /_   ____   _____ ____   / /____ _ / /_'
 echo '   / /    / __ \ / __ \ / ___// __ \ / // __ `// __/'
-echo '  / /___ / / / // /_/ // /__ / /_/ // // /_/ // /_ ' 
+echo '  / /___ / / / // /_/ // /__ / /_/ // // /_/ // /_ '
 echo '  \____//_/ /_/ \____/ \___/ \____//_/ \__,_/ \__/'
 echo '                                      config'
 echo ''
@@ -57,3 +57,4 @@ defaults write $PREF_DOMAIN "XBFF Syntax Type" -string "Ruby (default)"
 
 #defaults write $PREF_DOMAIN "NSQuitAlwaysKeepsWindows" -bool YES
 defaults write $PREF_DOMAIN "CHSaveOnDefocus" -bool NO
+defaults write $PREF_DOMAIN "CHTrimTrailingWhitespaceAmount" -int 1
