@@ -1,7 +1,8 @@
 .DS_Store
 CodeCompletion
-Projects
 ProjectIndexes
 diglett-watchd
 recent_projects.plist
 allrecents.txt
+projects.db
+Projects.old
