@@ -38,7 +38,7 @@
 
 (apply variable
     Variable
-    (color [rgba(1.000000, 1.000000, 1.000000, 1.000000)]))
+    (color [rgba(1.000000, 0.000000, 0.501961, 0.690000)]))
 
 (apply invalid.deprecated
     [Invalid – Deprecated]
@@ -66,6 +66,10 @@
 (apply [meta.tag, meta.tag entity]
     meta.tag
     (color [rgba(0.498039, 0.564706, 0.666667, 1.000000)]))
+
+(apply meta.punctuation
+    meta.punctuation
+    (color [rgba(0.000000, 0.000000, 0.000000, 0.700000)]))
 
 (apply entity.name.section
     entity.name.section
@@ -267,3 +271,21 @@
 (apply [diff.header, diff.meta.range]
     [Diff Header]
     (color [rgba(0.701961, 0.701961, 0.701961, 1.000000)]))
+
+(apply bold
+    (bold))
+
+(apply italic
+    (italic))
+
+(apply underline
+    (underline))
+
+(apply bold
+    (bold))
+
+(apply italic
+    (italic))
+
+(apply underline
+    (underline))
