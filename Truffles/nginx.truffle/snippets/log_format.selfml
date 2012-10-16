@@ -1,0 +1,8 @@
+(name log_format)
+
+(trigger
+    (tab log))
+
+(only-in source.nginx)
+
+(snippet [log_format ncsacombo '$remote_addr - $remote_user [$time_local] "$request" $status $body_bytes_sent "$http_referer" "$http_user_agent"';])

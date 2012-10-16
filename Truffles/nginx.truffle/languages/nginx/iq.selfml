@@ -1,0 +1,8 @@
+(detector
+    (extension conf))
+
+(folding
+    (start [\{\s*$])
+    (stop [^\s*\}]))
+
+(comment.line [# ])
