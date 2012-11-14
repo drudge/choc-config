@@ -46,3 +46,9 @@
 [submodule "Mixins/pastie.chocmixin"]
 	path = Mixins/pastie.chocmixin
 	url = git@github.com:drudge/pastie.chocmixin.git
+[submodule "Mixins/encode-entities.chocmixin.git"]
+	path = Mixins/encode-entities.chocmixin.git
+	url = https://github.com/peteschaffner/encode-entities.chocmixin.git
+[submodule "Mixins/csscomb.chocmixin"]
+	path = Mixins/csscomb.chocmixin
+	url = git@github.com:drudge/csscomb.chocmixin.git
