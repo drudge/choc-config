@@ -30,5 +30,5 @@ echo "Cloning configuration..."
 
 git clone $REPO "$APP_SUPPORT" --recursive --quiet
 
-source update-links.sh
-source set-prefs.sh
+source "$APP_SUPPORT/update-links.sh"
+source "$APP_SUPPORT/set-prefs.sh"

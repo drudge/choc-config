@@ -28,9 +28,6 @@
 [submodule "Truffles/diff.truffle"]
 	path = Truffles/diff.truffle
 	url = git://github.com/chocolat/diff.truffle.git
-[submodule "Truffles/sass.truffle"]
-	path = Truffles/sass.truffle
-	url = git://github.com/chocolat/sass.truffle.git
 [submodule "Truffles/jade.truffle"]
 	path = Truffles/jade.truffle
 	url = git@github.com:drudge/jade.truffle.git
