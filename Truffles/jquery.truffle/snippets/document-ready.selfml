@@ -1,0 +1,11 @@
+(name [document ready])
+
+(trigger
+    (tab ready))
+
+(only-in source.js.jquery)
+
+(snippet [$(document).ready(function() {
+	%{0="// Stuff to do as soon as the DOM is ready;"}
+});
+])

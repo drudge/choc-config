@@ -1,0 +1,8 @@
+(name replaceWith)
+
+(trigger
+    (tab .replaceWith))
+
+(only-in source.js.jquery)
+
+(snippet [.replaceWith('%{1="htmlString/DOMElement/jQueryObject"}')%{0}])

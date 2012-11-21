@@ -1,0 +1,10 @@
+(name [filter (function)])
+
+(trigger
+    (tab .filter))
+
+(only-in source.js.jquery)
+
+(snippet [.filter(function(index) {
+  %{1="return %{2="something"};"}
+})])

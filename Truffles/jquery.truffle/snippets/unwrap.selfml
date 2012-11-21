@@ -1,0 +1,8 @@
+(name unwrap)
+
+(trigger
+    (tab .unwrap))
+
+(only-in source.js.jquery)
+
+(snippet [.unwrap()%{0}])

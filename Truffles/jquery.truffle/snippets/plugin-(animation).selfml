@@ -1,0 +1,10 @@
+(name [plugin (animation)])
+
+(trigger
+    (tab plugin))
+
+(only-in source.js.jquery)
+
+(snippet [jQuery.fn.%{1="myeffect"} = function(speed, easing, callback) {
+  return this.animate({%{2="param1"}: %{3="'value'"}}, speed, easing, callback);
+};])

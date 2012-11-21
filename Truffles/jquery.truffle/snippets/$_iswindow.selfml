@@ -1,0 +1,8 @@
+(name $.isWindow)
+
+(trigger
+    (tab $.isWindow))
+
+(only-in source.js.jquery)
+
+(snippet [$.isWindow('%{1="object"}')%{0}])

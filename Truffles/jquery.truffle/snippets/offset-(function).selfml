@@ -1,0 +1,10 @@
+(name [offset (function)])
+
+(trigger
+    (tab .offset))
+
+(only-in source.js.jquery)
+
+(snippet [.offset(function(index, currentCoordinates) {
+  %{1="return %{2="someObject"};"}
+})])

@@ -1,0 +1,10 @@
+(name error)
+
+(trigger
+    (tab .error))
+
+(only-in source.js.jquery)
+
+(snippet [.error(%{1="function() {
+	%{0="// Act on the event"}
+\\"}});])

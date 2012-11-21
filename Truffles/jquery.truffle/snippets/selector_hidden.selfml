@@ -1,0 +1,10 @@
+(name [hidden selector])
+
+(trigger
+    (key [[ctrl][shift]:])
+    (tab :))
+
+(only-in [source.js.jquery meta.selector.jquery])
+
+(snippet [:hidden
+])

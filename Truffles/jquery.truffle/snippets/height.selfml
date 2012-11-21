@@ -1,0 +1,8 @@
+(name height)
+
+(trigger
+    (tab .height))
+
+(only-in source.js.jquery)
+
+(snippet [.height(%{1="integer"})%{0}])

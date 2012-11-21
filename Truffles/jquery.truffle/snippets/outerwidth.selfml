@@ -1,0 +1,8 @@
+(name outerWidth)
+
+(trigger
+    (tab .outerWidth))
+
+(only-in source.js.jquery)
+
+(snippet [.outerWidth()%{0}])

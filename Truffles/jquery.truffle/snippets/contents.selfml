@@ -1,0 +1,8 @@
+(name contents)
+
+(trigger
+    (tab .contents))
+
+(only-in source.js.jquery)
+
+(snippet [.contents()%{0}])

@@ -1,0 +1,8 @@
+(name removeData)
+
+(trigger
+    (tab .removeData))
+
+(only-in source.js.jquery)
+
+(snippet [.removeData('%{1="data name"}')%{0}])

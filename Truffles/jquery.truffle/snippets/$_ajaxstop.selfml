@@ -1,0 +1,11 @@
+(name ajaxStop)
+
+(trigger
+    (tab .ajaxStop))
+
+(only-in source.js.jquery)
+
+(snippet [.ajaxStop(function() {
+  %{1="//stuff to do when all AJAX calls have completed"};
+});
+%{0}])

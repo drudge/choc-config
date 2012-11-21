@@ -1,0 +1,9 @@
+(name [enabled selector])
+
+(trigger
+    (key [[ctrl][alt][shift]:])
+    (tab :))
+
+(only-in [source.js.jquery meta.selector.jquery])
+
+(snippet :enabled)

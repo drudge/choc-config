@@ -1,0 +1,8 @@
+(name [toggle (show/hide)])
+
+(trigger
+    (tab .toggle))
+
+(only-in source.js.jquery)
+
+(snippet [.toggle(%{1/(^[0-9]+$)|.+/(?1::')/}%{1="slow/400/fast"}%{1/(^[0-9]+$)|.+/(?1::')/})%{0}])

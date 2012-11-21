@@ -1,0 +1,8 @@
+(name offsetParent)
+
+(trigger
+    (tab .offsetParent))
+
+(only-in source.js.jquery)
+
+(snippet [.offsetParent()%{0}])

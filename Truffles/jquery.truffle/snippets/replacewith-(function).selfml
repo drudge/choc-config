@@ -1,0 +1,10 @@
+(name [replaceWith (function)])
+
+(trigger
+    (tab [. replaceWith]))
+
+(only-in source.js.jquery)
+
+(snippet [.replaceWith(function(index, currentContents) {
+  %{1="return %{2="something"};"}
+})])

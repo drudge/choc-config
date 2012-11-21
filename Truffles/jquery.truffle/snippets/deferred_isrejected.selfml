@@ -1,0 +1,8 @@
+(name deferred.isRejected)
+
+(trigger
+    (tab .isRejected))
+
+(only-in source.js.jquery)
+
+(snippet [.isRejected()%{0}])

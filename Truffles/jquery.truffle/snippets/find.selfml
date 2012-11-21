@@ -1,0 +1,8 @@
+(name find)
+
+(trigger
+    (tab .find))
+
+(only-in source.js.jquery)
+
+(snippet [.find('%{1="selector expression"}')%{0}])

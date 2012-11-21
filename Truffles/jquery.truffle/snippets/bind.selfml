@@ -1,0 +1,10 @@
+(name bind)
+
+(trigger
+    (tab .bind))
+
+(only-in source.js.jquery)
+
+(snippet [.bind('%{1="event name"}'%{2/(^,).*|.+/(?1::, )/}%{2="eventData"}, function(%{3="event"}) {
+  %{0="// Act on the event"}
+});])

@@ -1,0 +1,8 @@
+(name closest)
+
+(trigger
+    (tab .closest))
+
+(only-in source.js.jquery)
+
+(snippet [.closest('%{1="selector expression"}')%{0}])

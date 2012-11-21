@@ -1,0 +1,8 @@
+(name deferred.then)
+
+(trigger
+    (tab .then))
+
+(only-in source.js.jquery)
+
+(snippet [.then(%{1="doneCallbacks"}, %{2="failCallbacks"})%{0}])

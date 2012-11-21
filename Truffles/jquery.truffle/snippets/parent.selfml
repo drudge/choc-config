@@ -1,0 +1,8 @@
+(name parent)
+
+(trigger
+    (tab .parent))
+
+(only-in source.js.jquery)
+
+(snippet [.parent(%{1/(.+)/(?1:':)/}%{1="selector expression"}%{1/(.+)/(?1:':)/})%{0}])

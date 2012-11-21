@@ -1,0 +1,8 @@
+(name deferred.resolveWith)
+
+(trigger
+    (tab .resolveWith))
+
+(only-in source.js.jquery)
+
+(snippet [.resolveWith(%{1="context"}%{2/(^,).*|.+/(?1::, )/}%{2="args"})%{0}])

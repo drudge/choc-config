@@ -1,0 +1,8 @@
+(name jQuery.isEmptyObject)
+
+(trigger
+    (tab jQuery.isEmptyObject))
+
+(only-in source.js.jquery)
+
+(snippet [jQuery.isEmptyObject('%{1="object"}')%{0}])

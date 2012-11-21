@@ -1,0 +1,8 @@
+(name [$(this)])
+
+(trigger
+    (tab this))
+
+(only-in source.js.jquery)
+
+(snippet [$(this)%{0}])

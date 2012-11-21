@@ -1,0 +1,8 @@
+(name contains)
+
+(trigger
+    (tab .contains))
+
+(only-in source.js.jquery)
+
+(snippet [.contains('%{1="text to find"}')%{0}])

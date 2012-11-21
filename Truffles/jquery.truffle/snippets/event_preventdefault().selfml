@@ -1,0 +1,8 @@
+(name [event.preventDefault()])
+
+(trigger
+    (tab ep))
+
+(only-in source.js.jquery)
+
+(snippet [%{1="event"}.preventDefault();%{0}])

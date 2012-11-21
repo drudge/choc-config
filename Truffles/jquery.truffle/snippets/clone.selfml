@@ -1,0 +1,9 @@
+(name clone)
+
+(trigger
+    (tab .clone))
+
+(only-in source.js.jquery)
+
+(snippet [.clone(%{1="withDataAndEvents"}%{2/(^,).*|.+/(?1::, )/}%{2="deepWithDataAndEvents"})%{0}
+])

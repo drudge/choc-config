@@ -1,0 +1,191 @@
+(root source.js.jquery
+    (include source)
+    (zone
+        (inner-identifier meta.selector.jquery)
+        (start
+            (regex [(\$|jQuery)(\((?!('|")<))]
+                (1 support.class.js.jquery)
+                (2 punctuation.section.class.js)))
+        (end
+            (regex [(\))]
+                (1 punctuation.section.class.js)))
+        (subzones
+            (include @nested-parens)
+            (zone
+                (start
+                    (regex '
+                        (0 punctuation.definition.selector.begin.js)))
+                (end
+                    (regex '
+                        (0 punctuation.definition.selector.end.js)))
+                (subzones
+                    (include @css-selector)))
+            (zone
+                (start
+                    (regex "
+                        (0 punctuation.definition.selector.begin.js)))
+                (end
+                    (regex "
+                        (0 punctuation.definition.selector.end.js)))
+                (subzones
+                    (include @css-selector)))
+            (include source.js)))
+    (zone
+        (inner-identifier meta.selector.jquery)
+        (start
+            (regex [\b(add|appendTo|children|closest|detach|filter|find|has|index|insertAfter|insertBefore|is|next|nextAll|nextUntil|not|parent|parents|parentsUntil|prependTo|prev|prevAll|prevUntil|remove|replaceAll|siblings)\s*(\((?!('|")<))]
+                (1 support.function.js.jquery)
+                (2 punctuation.section.function.js)))
+        (end
+            (regex [(\))]
+                (1 punctuation.section.function.js)))
+        (subzones
+            (include @nested-parens)
+            (zone
+                (start
+                    (regex '
+                        (0 punctuation.definition.selector.begin.js)))
+                (end
+                    (regex '
+                        (0 punctuation.definition.selector.end.js)))
+                (subzones
+                    (include @css-selector)))
+            (zone
+                (start
+                    (regex "
+                        (0 punctuation.definition.selector.begin.js)))
+                (end
+                    (regex "
+                        (0 punctuation.definition.selector.end.js)))
+                (subzones
+                    (include @css-selector)))
+            (include source.js)))
+    (zone
+        (inner-identifier meta.markup.jquery)
+        (start
+            (regex [(\$|jQuery)(\((?=('|")<))]
+                (1 support.class.js.jquery)
+                (2 punctuation.section.class.js)))
+        (end
+            (regex [(\))]
+                (1 punctuation.section.class.js)))
+        (subzones
+            (zone
+                (start
+                    (regex '
+                        (0 punctuation.definition.markup.begin.js)))
+                (end
+                    (regex '
+                        (0 punctuation.definition.markup.end.js)))
+                (subzones
+                    (include @html-markup-single)))
+            (zone
+                (start
+                    (regex "
+                        (0 punctuation.definition.markup.begin.js)))
+                (end
+                    (regex "
+                        (0 punctuation.definition.markup.end.js)))
+                (subzones
+                    (include @html-markup-double)))
+            (include source.js)))
+    (zone
+        (inner-identifier meta.markup.jquery)
+        (start
+            (regex [\b(add|after|append|before|html|prepend|replaceWith|wrap|wrapAll|wrapInner)\s*(\((?=('|")<))]
+                (1 support.function.js.jquery)
+                (2 punctuation.section.class.js)))
+        (end
+            (regex [(\))]
+                (1 punctuation.section.class.js)))
+        (subzones
+            (zone
+                (start
+                    (regex '
+                        (0 punctuation.definition.markup.begin.js)))
+                (end
+                    (regex '
+                        (0 punctuation.definition.markup.end.js)))
+                (subzones
+                    (include @html-markup-single)))
+            (zone
+                (start
+                    (regex "
+                        (0 punctuation.definition.markup.begin.js)))
+                (end
+                    (regex "
+                        (0 punctuation.definition.markup.end.js)))
+                (subzones
+                    (include @html-markup-double)))
+            (include source.js)))
+    (zone meta.property.jquery
+        (match
+            (regex [(\$|jQuery)\.(ajaxSettings|boxModel|browser|fx|isReady|support|fn)]
+                (1 support.class.js)
+                (2 support.constant.js))))
+    (zone support.constant.js.jquery
+        (match
+            (regex [(?<=\.)(length|selector|context)\b])))
+    (zone support.function.js.jquery
+        (match
+            (regex [(?<=\.)(add|addClass|after|ajaxComplete|ajaxError|ajaxSend|ajaxStart|ajaxStop|ajaxSuccess|always|andSelf|animate|append|appendTo|attr|before|bind|blur|change|children|clearQueue|click|clone|closest|contents|css|data|dblclick|delay|delegate|dequeue|detach|disable|disabled|die|domManip|done|each|empty|end|eq|error|fadeIn|fadeOut|fadeTo|fadeToggle|fail|filter|find|first|fire|fired|fireWith|focus|focusin|focusout|get|has|hasClass|height|hide|hover|html|index|innerHeight|innerWidth|insertAfter|insertBefore|is|isRejected|isResolved|keydown|keypress|keyup|last|live|load|lock|locked|map|mousedown|mouseenter|mouseleave|mousemove|mouseout|mouseover|mouseup|next|nextAll|nextUntil|not|notify|notifyWith|off|offset|offsetParent|on|one|outerHeight|outerWidth|parent|parents|parentsUntil|pipe|position|prepend|prependTo|prev|prevAll|prevUntil|progress|promise|prop|pushStack|queue|ready|reject|rejectWith|remove|removeAttr|removeClass|removeData|replaceAll|replaceWith|resize|resolve|resolveWith|scroll|scrollLeft|scrollTop|select|serialize|serializeArray|show|siblings|size|slice|slideDown|slideToggle|slideUp|state|stop|submit|text|then|toArray|toggle|toggleClass|trigger|triggerHandler|unbind|undelegate|unload|unwrap|val|width|wrap|wrapAll|wrapInner)\b])))
+    (zone support.function.js.jquery
+        (match
+            (regex [(\$|jQuery)(\.)(Callbacks|Deferred|Event|ajax|ajaxPrefilter|ajaxSetup|ajaxTransport|bindReady|clean|cleanData|contains|css|data|dequeue|each|error|extend|Event|get|getJSON|getScript|globalEval|grep|inArray|isArray|isEmptyObject|isFunction|isNumeric|isPlainObject|isWindow|isXMLDoc|makeArray|map|merge|noConflict|noop|param|parseJSON|parseXML|post|proxy|queue|ready|removeData|sibling|sub|text|triggerGlobal|trim|type|unique|when)\b]
+                (3 support.function.js)
+                (1 support.class.js))))
+    (include source.js))
+
+(collection css-selector
+    (zone meta.selector.css
+        (start
+            (regex [(?=\s*[.*#a-zA-Z])]))
+        (end
+            (regex [(?=["'])]))
+        (subzones
+            (zone entity.name.tag.css
+                (match
+                    (regex [\b(a|abbr|acronym|address|area|article|aside|audio|b|base|big|blockquote|body|br|button|canvas|caption|cite|command|code|col|colgroup|datalist|dd|del|details|device|dfn|div|dl|dt|em|embed|fieldset|fig(ure|caption)|footer|form|frame|frameset|(h[1-6])|head(er)?|hgroup|hr|html|i|iframe|img|input|ins|kbd|keygen|label|legend|li|link|map|menu|meta|meter|noframes|noscript|object|ol|optgroup|option|output|p|param|pre|progress|q|samp|script|section|select|small|span|strike|strong|style|summary|sub|sup|table|tbody|td|textarea|tfoot|th|thead|time|title|tr|tt|ul|var|video)\b])))
+            (zone entity.other.attribute-name.class.css
+                (match
+                    (regex [(\.)[a-zA-Z0-9_-]+]
+                        (1 punctuation.definition.attribute-name.css))))
+            (zone entity.other.attribute-name.id.css
+                (match
+                    (regex [(#)[a-zA-Z0-9_-]+]
+                        (1 punctuation.definition.attribute-name.css))))
+            (zone entity.name.tag.wildcard.css
+                (match
+                    (regex \*)))
+            (zone entity.other.attribute-name.pseudo-class.css
+                (match
+                    (regex [(:)\b(active|after|before|first-letter|first-line|hover|link|target|visited)\b]
+                        (1 punctuation.definition.attribute-name.css)))))))
+
+(collection html-markup-double
+    (zone meta.markup.html
+        (subzones
+            (include text.html.basic)
+            (zone constant.character.escape.js
+                (match
+                    (regex [\\(")]))))))
+
+(collection html-markup-single
+    (zone meta.markup.html
+        (subzones
+            (include text.html.basic)
+            (zone constant.character.escape.js
+                (match
+                    (regex [\\(')]))))))
+
+(collection nested-parens
+    (zone
+        (start
+            (regex [\(]
+                (0 punctuation.section.scope.js)))
+        (end
+            (regex [\)]
+                (0 punctuation.section.scope.js)))
+        (subzones
+            (include @nested-parens)
+            (include source.js))))

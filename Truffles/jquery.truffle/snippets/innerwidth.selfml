@@ -1,0 +1,8 @@
+(name innerWidth)
+
+(trigger
+    (tab .innerWidth))
+
+(only-in source.js.jquery)
+
+(snippet [.innerWidth()%{0}])

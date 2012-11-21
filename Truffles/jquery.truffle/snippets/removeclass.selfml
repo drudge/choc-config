@@ -1,0 +1,8 @@
+(name removeClass)
+
+(trigger
+    (tab .removeClass))
+
+(only-in source.js.jquery)
+
+(snippet [.removeClass('%{1="class name"}')%{0}])

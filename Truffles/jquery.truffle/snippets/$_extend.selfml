@@ -1,0 +1,9 @@
+(name $.extend)
+
+(trigger
+    (tab $.extend))
+
+(only-in source.js.jquery)
+
+(snippet [$.extend(%{1="true, "}%{2="target object"}, %{3="object1"});
+%{0}])

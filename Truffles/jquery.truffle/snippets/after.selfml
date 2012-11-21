@@ -1,0 +1,8 @@
+(name after)
+
+(trigger
+    (tab .after))
+
+(only-in source.js.jquery)
+
+(snippet [.after('%{1="Some text <b>and bold!</b>"}')%{0}])

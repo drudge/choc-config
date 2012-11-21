@@ -1,0 +1,8 @@
+(name deferred.fail)
+
+(trigger
+    (tab .fail))
+
+(only-in source.js.jquery)
+
+(snippet [.fail(%{1="failCallbacks"})%{0}])

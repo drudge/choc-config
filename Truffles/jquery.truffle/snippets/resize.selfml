@@ -1,0 +1,10 @@
+(name resize)
+
+(trigger
+    (tab .resize))
+
+(only-in source.js.jquery)
+
+(snippet [.resize(%{1="function(%{2="event"}) {
+	%{0="// Act on the event"}
+\\"}});])

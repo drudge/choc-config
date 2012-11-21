@@ -1,0 +1,16 @@
+(name [plugin (selector)])
+
+(trigger
+    (tab plugin))
+
+(only-in source.js.jquery)
+
+(snippet [(function($) {
+  $.extend($.expr[':'], {
+    %{1="selectorName"}: function(element, index, matches, set) {
+      %{0}
+      return something;
+    }
+  });
+})(jQuery);
+])

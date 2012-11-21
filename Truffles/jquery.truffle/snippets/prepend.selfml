@@ -1,0 +1,8 @@
+(name prepend)
+
+(trigger
+    (tab .prepend))
+
+(only-in source.js.jquery)
+
+(snippet [.prepend('%{1="Some text <b>and bold!</b>"}')%{0}])

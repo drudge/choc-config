@@ -1,0 +1,8 @@
+(name slideDown)
+
+(trigger
+    (tab .slideDown))
+
+(only-in source.js.jquery)
+
+(snippet [.slideDown(%{1/(^[0-9]+$)|.+/(?1::')/}%{1="slow/400/fast"}%{1/(^[0-9]+$)|.+/(?1::')/})%{0}])

@@ -1,0 +1,11 @@
+(name jQuery.getJSON)
+
+(trigger
+    (tab jQuery.getJSON))
+
+(only-in source.js.jquery)
+
+(snippet [jQuery.getJSON('%{1="/path/to/file"}'%{2/(.+)/(?1:, {:)/}%{2="param1: 'value1'"}%{2/(.+)/(?1:}:)/}%{3/(.+)/(?1:, function\(json, textStatus\) {
+  :)/}%{3="//optional stuff to do after success"}%{3/(.+)/(?1:
+}:)/});
+%{0}])

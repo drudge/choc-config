@@ -1,0 +1,10 @@
+(name [map (function)])
+
+(trigger
+    (tab .map))
+
+(only-in source.js.jquery)
+
+(snippet [.map(function(%{1="index"}%{2=", %{3="elem"}"}) {
+  %{4="return %{5="something"};"}
+})])

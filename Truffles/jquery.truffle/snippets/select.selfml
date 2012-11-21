@@ -1,0 +1,10 @@
+(name select)
+
+(trigger
+    (tab .select))
+
+(only-in source.js.jquery)
+
+(snippet [.select(%{1="function(%{2="event"}) {
+	%{0="// Act on the event"}
+\\"}});])

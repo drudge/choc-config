@@ -1,0 +1,8 @@
+(name undelegate)
+
+(trigger
+    (tab .undelegate))
+
+(only-in source.js.jquery)
+
+(snippet [.undelegate('%{1="selector"}', '%{2="event type"}', '%{3="function"}');])

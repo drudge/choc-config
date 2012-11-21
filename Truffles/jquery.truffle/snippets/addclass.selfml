@@ -1,0 +1,8 @@
+(name addClass)
+
+(trigger
+    (tab .addClass))
+
+(only-in source.js.jquery)
+
+(snippet [.addClass('%{1="class name"}')%{0}])

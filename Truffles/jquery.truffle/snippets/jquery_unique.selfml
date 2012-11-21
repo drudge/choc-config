@@ -1,0 +1,9 @@
+(name jQuery.unique)
+
+(trigger
+    (tab jQuery.unique))
+
+(only-in source.js.jquery)
+
+(snippet [jQuery.unique(%{1="DOMelementArray"});
+%{0}])

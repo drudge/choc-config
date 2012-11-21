@@ -1,0 +1,11 @@
+(name ajaxError)
+
+(trigger
+    (tab .ajaxError))
+
+(only-in source.js.jquery)
+
+(snippet [.ajaxError(function(%{1="event, xhr, settings, thrownError"}) {
+  %{2="//stuff to do when an AJAX call returns an error"};
+});
+%{0}])

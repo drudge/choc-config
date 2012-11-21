@@ -1,0 +1,8 @@
+(name jQuery.type)
+
+(trigger
+    (tab jQuery.type))
+
+(only-in source.js.jquery)
+
+(snippet [jQuery.type(%{1="object"})%{0}])

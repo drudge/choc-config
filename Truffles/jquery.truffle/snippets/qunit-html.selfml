@@ -1,0 +1,30 @@
+(name [QUnit HTML])
+
+(trigger
+    (tab qhtml))
+
+(only-in text.html)
+
+(snippet [<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>%{1}</title>
+  <link rel="stylesheet" href="%{2}qunit.css" type="text/css" media="screen">
+  <script src="%{3="http://code.jquery.com/jquery-latest.js"}"></script>
+  <script src="%{4}qunit.js"></script>
+  <script src="%{5="myscript.js"}"></script>%{6="
+  <script src=\"%{7="test.js"}\"></script>"}
+	
+</head>
+<body>
+  <h1 id="qunit-header">%{8="%{1}"}</h1>
+  <h2 id="qunit-banner"></h2>
+  <div id="qunit-testrunner-toolbar"></div>
+  <h2 id="qunit-userAgent"></h2>
+  <ol id="qunit-tests"></ol>
+  <div id="qunit-fixture">
+	  %{9="<!-- my test markup goes here -->"}
+  </div>
+</body>
+</html>])

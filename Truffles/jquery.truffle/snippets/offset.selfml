@@ -1,0 +1,8 @@
+(name offset)
+
+(trigger
+    (tab .offset))
+
+(only-in source.js.jquery)
+
+(snippet [.offset(%{1/(.+)/(?1:{:)/}%{1="coordinates"}%{1/(.+)/(?1:}:)/})%{0}])

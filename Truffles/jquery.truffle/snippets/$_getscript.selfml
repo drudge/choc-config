@@ -1,0 +1,11 @@
+(name $.getScript)
+
+(trigger
+    (tab $.getScript))
+
+(only-in source.js.jquery)
+
+(snippet [$.getScript('%{1="path/to/file"}'%{2/(.+)/(?1:, function\(data, textStatus\) {
+  :)/}%{2="//optional stuff to do after getScript"}%{2/(.+)/(?1:
+}:)/});
+%{0}])

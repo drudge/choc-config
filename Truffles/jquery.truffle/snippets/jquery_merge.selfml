@@ -1,0 +1,9 @@
+(name jQuery.merge)
+
+(trigger
+    (tab jQuery.merge))
+
+(only-in source.js.jquery)
+
+(snippet [jQuery.merge(%{1="array1"}, %{2="array2"});
+%{0}])

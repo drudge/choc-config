@@ -1,0 +1,8 @@
+(name fadeOut)
+
+(trigger
+    (tab .fadeOut))
+
+(only-in source.js.jquery)
+
+(snippet [.fadeOut(%{1/(^[0-9]+$)|.+/(?1::')/}%{1="slow/400/fast"}%{1/(^[0-9]+$)|.+/(?1::')/})%{0}])

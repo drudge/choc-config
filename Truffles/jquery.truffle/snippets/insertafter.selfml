@@ -1,0 +1,8 @@
+(name insertAfter)
+
+(trigger
+    (tab .insertAfter))
+
+(only-in source.js.jquery)
+
+(snippet [.insertAfter('%{1="selector expression"}')%{0}])

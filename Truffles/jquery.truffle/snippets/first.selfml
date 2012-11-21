@@ -1,0 +1,8 @@
+(name first)
+
+(trigger
+    (tab .first))
+
+(only-in source.js.jquery)
+
+(snippet [.first()%{0}])

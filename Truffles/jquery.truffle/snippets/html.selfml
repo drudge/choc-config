@@ -1,0 +1,8 @@
+(name html)
+
+(trigger
+    (tab .html))
+
+(only-in source.js.jquery)
+
+(snippet [.html(%{1/(.+)/(?1:':)/}%{1="Some text <b>and bold!</b>"}%{1/(.+)/(?1:':)/})%{0}])

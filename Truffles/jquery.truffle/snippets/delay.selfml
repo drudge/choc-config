@@ -1,0 +1,8 @@
+(name delay)
+
+(trigger
+    (tab .delay))
+
+(only-in source.js.jquery)
+
+(snippet [.delay(%{1="milliseconds"}%{2/^([^,]|\w).*$|.+/(?1:, :)/}%{2="queueName"})%{0}])

@@ -1,0 +1,8 @@
+(name [event.stopPropagation()])
+
+(trigger
+    (tab esp))
+
+(only-in source.js.jquery)
+
+(snippet [%{1="event"}.stopPropagation();%{0}])

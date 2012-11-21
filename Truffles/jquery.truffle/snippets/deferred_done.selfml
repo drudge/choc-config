@@ -1,0 +1,8 @@
+(name deferred.done)
+
+(trigger
+    (tab .done))
+
+(only-in source.js.jquery)
+
+(snippet [.done(%{1="doneCallbacks"})%{0}])

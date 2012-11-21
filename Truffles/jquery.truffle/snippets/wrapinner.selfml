@@ -1,0 +1,8 @@
+(name wrapInner)
+
+(trigger
+    (tab .wrap))
+
+(only-in source.js.jquery)
+
+(snippet [.wrapInner('%{1="<div class=\"extra-wrapper\"></div>"}')%{0}])

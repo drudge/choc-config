@@ -1,0 +1,8 @@
+(name serialize)
+
+(trigger
+    (tab .serialize))
+
+(only-in source.js.jquery)
+
+(snippet [.serialize()%{0}])

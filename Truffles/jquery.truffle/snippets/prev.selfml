@@ -1,0 +1,8 @@
+(name prev)
+
+(trigger
+    (tab .prev))
+
+(only-in source.js.jquery)
+
+(snippet [.prev(%{1/(.+)/(?1:':)/}%{1="selector expression"}%{1/(.+)/(?1:':)/})%{0}])

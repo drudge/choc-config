@@ -1,0 +1,8 @@
+(name $.trim)
+
+(trigger
+    (tab $.trim))
+
+(only-in source.js.jquery)
+
+(snippet [$.trim(%{1="'%{2="string"}'"})%{0}])

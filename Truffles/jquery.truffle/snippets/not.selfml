@@ -1,0 +1,8 @@
+(name not)
+
+(trigger
+    (tab .not))
+
+(only-in source.js.jquery)
+
+(snippet [.not('%{1="selector expression"}')%{0}])

@@ -1,0 +1,10 @@
+(name focusin)
+
+(trigger
+    (tab .focusin))
+
+(only-in source.js.jquery)
+
+(snippet [.focusin(%{1="function(%{2="event"}) {
+	%{0="// Act on the event"}
+\\"}});])

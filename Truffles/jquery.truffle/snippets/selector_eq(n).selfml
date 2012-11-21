@@ -1,0 +1,9 @@
+(name [eq(n) selector])
+
+(trigger
+    (key [[ctrl][shift]:])
+    (tab :))
+
+(only-in [source.js.jquery meta.selector.jquery])
+
+(snippet [:eq(%{1="n"})%{0}])

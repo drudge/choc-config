@@ -1,0 +1,8 @@
+(name jQuery.browser.version)
+
+(trigger
+    (tab jQuery.browser))
+
+(only-in source.js.jquery)
+
+(snippet jQuery.browser.version)

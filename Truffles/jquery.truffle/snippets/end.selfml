@@ -1,0 +1,8 @@
+(name end)
+
+(trigger
+    (tab .end))
+
+(only-in source.js.jquery)
+
+(snippet [.end()%{0}])

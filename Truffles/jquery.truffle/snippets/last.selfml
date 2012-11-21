@@ -1,0 +1,8 @@
+(name last)
+
+(trigger
+    (tab .last))
+
+(only-in source.js.jquery)
+
+(snippet [.last()%{0}])

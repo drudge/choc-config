@@ -1,0 +1,12 @@
+(name hover)
+
+(trigger
+    (tab .hover))
+
+(only-in source.js.jquery)
+
+(snippet [.hover(function() {
+	%{1="// Stuff to do when the mouse enters the element;"}
+}, function() {
+	%{2="// Stuff to do when the mouse leaves the element;"}
+});%{0}])

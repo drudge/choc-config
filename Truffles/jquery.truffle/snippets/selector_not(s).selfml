@@ -1,0 +1,9 @@
+(name [not(s)  selector])
+
+(trigger
+    (key [[ctrl][shift]:])
+    (tab :))
+
+(only-in [source.js.jquery meta.selector.jquery])
+
+(snippet [:not(%{1="s"})%{0}])

@@ -1,0 +1,8 @@
+(name next)
+
+(trigger
+    (tab .next))
+
+(only-in source.js.jquery)
+
+(snippet [.next(%{1/(.+)/(?1:':)/}%{1="selector"}%{1/(.+)/(?1:':)/})%{0}])

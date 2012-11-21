@@ -1,0 +1,8 @@
+(name hasClass)
+
+(trigger
+    (tab .hasClass))
+
+(only-in source.js.jquery)
+
+(snippet [.hasClass('%{1="className"}')%{0}])

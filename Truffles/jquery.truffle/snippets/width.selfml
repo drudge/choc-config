@@ -1,0 +1,8 @@
+(name width)
+
+(trigger
+    (tab .width))
+
+(only-in source.js.jquery)
+
+(snippet [.width(%{1="integer"})%{0}])

@@ -1,0 +1,8 @@
+(name outerHeight)
+
+(trigger
+    (tab .outerHeight))
+
+(only-in source.js.jquery)
+
+(snippet [.outerHeight()%{0}])

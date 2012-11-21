@@ -1,0 +1,8 @@
+(name stop)
+
+(trigger
+    (tab .stop))
+
+(only-in source.js.jquery)
+
+(snippet [.stop(%{1="clearQueue"}%{2/^([^,]|\w).*$|.+/(?1:, :)/}%{2="gotoEnd"})%{0}])

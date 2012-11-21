@@ -1,0 +1,10 @@
+(name ajaxSuccess)
+
+(trigger
+    (tab .ajaxSuccess))
+
+(only-in source.js.jquery)
+
+(snippet [.ajaxSuccess(function(event, xhr, settings) {
+	%{1="// executes whenever an AJAX request completes successfully"}
+});%{0}])

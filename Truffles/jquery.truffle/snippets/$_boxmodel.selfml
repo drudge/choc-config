@@ -1,0 +1,8 @@
+(name $.boxModel)
+
+(trigger
+    (tab $.boxModel))
+
+(only-in source.js.jquery)
+
+(snippet $.boxModel)

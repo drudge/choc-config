@@ -1,0 +1,8 @@
+(name is)
+
+(trigger
+    (tab .is))
+
+(only-in source.js.jquery)
+
+(snippet [.is('%{1="selector expression"}')%{0}])

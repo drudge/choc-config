@@ -1,0 +1,8 @@
+(name innerHeight)
+
+(trigger
+    (tab .innerHeight))
+
+(only-in source.js.jquery)
+
+(snippet [.innerHeight()%{0}])

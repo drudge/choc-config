@@ -1,0 +1,8 @@
+(name attr)
+
+(trigger
+    (tab .attr))
+
+(only-in source.js.jquery)
+
+(snippet [.attr('%{1="attribute"}'%{2/(^,).*|.+/(?1::, )/}%{2/(^([0-9]+$|,.*))|.+/(?1::')/}%{2="value"}%{2/(^([0-9]+$|,.*))|.+/(?1::')/})%{0}])

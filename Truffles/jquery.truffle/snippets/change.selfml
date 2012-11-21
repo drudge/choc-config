@@ -1,0 +1,10 @@
+(name change)
+
+(trigger
+    (tab .change))
+
+(only-in source.js.jquery)
+
+(snippet [.change(%{1="function(%{2="event"}) {
+	%{0="// Act on the event"}
+\\"}});])

@@ -1,0 +1,8 @@
+(name deferred.isResolved)
+
+(trigger
+    (tab .isResolved))
+
+(only-in source.js.jquery)
+
+(snippet [.isResolved()%{0}])

@@ -1,0 +1,8 @@
+(name triggerHandler)
+
+(trigger
+    (tab .trigger))
+
+(only-in source.js.jquery)
+
+(snippet [.triggerHandler('%{1="event name"}')%{0}])

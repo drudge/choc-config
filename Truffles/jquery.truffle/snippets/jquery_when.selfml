@@ -1,0 +1,9 @@
+(name jQuery.when)
+
+(trigger
+    (tab jQuery.when))
+
+(only-in source.js.jquery)
+
+(snippet [jQuery.when(%{1="deferreds"});
+%{0}])

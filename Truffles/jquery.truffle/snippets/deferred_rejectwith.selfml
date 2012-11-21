@@ -1,0 +1,8 @@
+(name deferred.rejectWith)
+
+(trigger
+    (tab .rejectWith))
+
+(only-in source.js.jquery)
+
+(snippet [.rejectWith(%{1="context"}%{2/(^,).*|.+/(?1::, )/}%{2="args"})%{0}])

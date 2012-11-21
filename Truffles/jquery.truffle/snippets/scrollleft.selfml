@@ -1,0 +1,8 @@
+(name scrollLeft)
+
+(trigger
+    (tab .scrollLeft))
+
+(only-in source.js.jquery)
+
+(snippet [.scrollLeft(%{1="value"})%{0}])

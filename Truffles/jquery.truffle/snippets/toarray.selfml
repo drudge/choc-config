@@ -1,0 +1,8 @@
+(name toArray)
+
+(trigger
+    (tab .toArray))
+
+(only-in source.js.jquery)
+
+(snippet [.toArray()%{0}])

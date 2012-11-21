@@ -1,0 +1,8 @@
+(name insertBefore)
+
+(trigger
+    (tab .insertBefore))
+
+(only-in source.js.jquery)
+
+(snippet [.insertBefore('%{1="selector expression"}')%{0}])

@@ -1,0 +1,11 @@
+(name [fadeIn (with callback)])
+
+(trigger
+    (tab .fadeIn))
+
+(only-in source.js.jquery)
+
+(snippet [.fadeIn(%{1/(^[0-9]+$)|.+/(?1::')/}%{1="slow/400/fast"}%{1/(^[0-9]+$)|.+/(?1::')/}, function() {
+	%{0="//Stuff to do *after* the animation takes place"};
+});
+])

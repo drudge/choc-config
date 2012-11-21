@@ -1,0 +1,8 @@
+(name jQuery.parseXML)
+
+(trigger
+    (tab jQuery.parseXML))
+
+(only-in source.js.jquery)
+
+(snippet [jQuery.parseXML(%{1="data"});%{0}])

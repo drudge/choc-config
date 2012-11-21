@@ -1,0 +1,8 @@
+(name siblings)
+
+(trigger
+    (tab .siblings))
+
+(only-in source.js.jquery)
+
+(snippet [.siblings(%{1/(.+)/(?1:':)/}%{1="selector expression"}%{1/(.+)/(?1:':)/})%{0}])

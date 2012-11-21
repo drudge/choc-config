@@ -1,0 +1,8 @@
+(name animate)
+
+(trigger
+    (tab .animate))
+
+(only-in source.js.jquery)
+
+(snippet [.animate({%{1="%{2="param1"}: %{3="value1"}%{4=", %{5="param2"}: %{6="value2"}"}"}}, %{7="speed"})%{0}])

@@ -1,0 +1,10 @@
+(name ajaxComplete)
+
+(trigger
+    (tab .ajaxComplete))
+
+(only-in source.js.jquery)
+
+(snippet [.ajaxComplete(function(event, xhr, settings) {
+	%{1="// executes whenever an AJAX request completes"}
+});%{0}])

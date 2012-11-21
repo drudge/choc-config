@@ -1,0 +1,10 @@
+(name load)
+
+(trigger
+    (tab .load))
+
+(only-in source.js.jquery)
+
+(snippet [.load(%{1="function() {
+	%{0="// Act on the event"}
+\\"}});])

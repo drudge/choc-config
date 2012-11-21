@@ -1,0 +1,8 @@
+(name andSelf)
+
+(trigger
+    (tab .andSelf))
+
+(only-in source.js.jquery)
+
+(snippet [.andSelf()%{0}])

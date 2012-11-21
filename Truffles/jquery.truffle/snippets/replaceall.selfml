@@ -1,0 +1,8 @@
+(name replaceAll)
+
+(trigger
+    (tab .replaceAll))
+
+(only-in source.js.jquery)
+
+(snippet [.replaceAll('%{1="data name"}')%{0}])

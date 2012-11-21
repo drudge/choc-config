@@ -1,0 +1,8 @@
+(name die)
+
+(trigger
+    (tab .die))
+
+(only-in source.js.jquery)
+
+(snippet [.die('%{1="eventType"}')%{0}])

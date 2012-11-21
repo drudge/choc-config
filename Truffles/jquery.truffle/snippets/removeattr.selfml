@@ -1,0 +1,8 @@
+(name removeAttr)
+
+(trigger
+    (tab .removeAttr))
+
+(only-in source.js.jquery)
+
+(snippet [.removeAttr('%{1="attribute name"}')%{0}])

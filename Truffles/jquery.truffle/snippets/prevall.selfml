@@ -1,0 +1,8 @@
+(name prevAll)
+
+(trigger
+    (tab .prevAll))
+
+(only-in source.js.jquery)
+
+(snippet [.prevAll(%{1/(.+)/(?1:':)/}%{1="selector"}%{1/(.+)/(?1:':)/})%{0}])

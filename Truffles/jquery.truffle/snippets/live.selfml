@@ -1,0 +1,10 @@
+(name live)
+
+(trigger
+    (tab .live))
+
+(only-in source.js.jquery)
+
+(snippet [.live('%{1="event type(s)"}', function(%{2="event"}) {
+	%{0="// Act on the event"}
+});])

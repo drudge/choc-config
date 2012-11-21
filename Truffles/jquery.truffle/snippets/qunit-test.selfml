@@ -1,0 +1,10 @@
+(name [QUnit test])
+
+(trigger
+    (tab test))
+
+(only-in source.js.jquery)
+
+(snippet [test('%{1="description"}'%{2/(.+)/(?1:, :)/}%{2="numberexpected"}%{3=", %{4="function() {
+  %{0}
+\\"}"}});])

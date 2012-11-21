@@ -1,0 +1,8 @@
+(name jQuery.sub)
+
+(trigger
+    (tab jQuery.sub))
+
+(only-in source.js.jquery)
+
+(snippet [jQuery.sub()%{0}])

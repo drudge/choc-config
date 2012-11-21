@@ -1,0 +1,8 @@
+(name prependTo)
+
+(trigger
+    (tab .prependTo))
+
+(only-in source.js.jquery)
+
+(snippet [.prependTo('%{1="selector expression"}')%{0}])

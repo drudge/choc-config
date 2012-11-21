@@ -1,0 +1,8 @@
+(name serializeArray)
+
+(trigger
+    (tab .serializeArray))
+
+(only-in source.js.jquery)
+
+(snippet [.serializeArray()%{0}])

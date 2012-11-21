@@ -1,0 +1,13 @@
+(name [toggle (event)])
+
+(trigger
+    (tab .toggle))
+
+(only-in source.js.jquery)
+
+(snippet [.toggle(function() {
+	%{1="// Stuff to do every *odd* time the element is clicked;"}
+}, function() {
+	%{2="// Stuff to do every *even* time the element is clicked;"}
+});
+%{0}])

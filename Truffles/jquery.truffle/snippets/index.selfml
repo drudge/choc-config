@@ -1,0 +1,8 @@
+(name index)
+
+(trigger
+    (tab .index))
+
+(only-in source.js.jquery)
+
+(snippet [.index(%{1/(.+)/(?1:':)/}%{1="selector/element"}%{1/(.+)/(?1:':)/})%{0}])

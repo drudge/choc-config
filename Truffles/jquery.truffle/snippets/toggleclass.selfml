@@ -1,0 +1,8 @@
+(name toggleClass)
+
+(trigger
+    (tab .toggleClass))
+
+(only-in source.js.jquery)
+
+(snippet [.toggleClass('%{1="class name"}')%{0}])

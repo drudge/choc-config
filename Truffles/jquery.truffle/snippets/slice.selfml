@@ -1,0 +1,8 @@
+(name slice)
+
+(trigger
+    (tab .slice))
+
+(only-in source.js.jquery)
+
+(snippet [.slice(%{1="start"}%{2/^([^,]|\d).*$|.+/(?1:, :)/}%{2="end"})%{0}])

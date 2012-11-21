@@ -1,0 +1,8 @@
+(name appendTo)
+
+(trigger
+    (tab .appendTo))
+
+(only-in source.js.jquery)
+
+(snippet [.appendTo('%{1="selector expression"}')%{0}])

@@ -1,0 +1,10 @@
+(name [animate (with callback)])
+
+(trigger
+    (tab .animate))
+
+(only-in source.js.jquery)
+
+(snippet [.animate({%{2="param1"}: %{3="value1"}%{4=", %{5="param2"}: %{6="value2"}"}}, %{7="speed"}, function() {
+  %{0="// stuff to do after animation is complete"}
+})])

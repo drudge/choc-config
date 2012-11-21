@@ -1,0 +1,9 @@
+(name [nth-child(n) selector])
+
+(trigger
+    (key [[ctrl][shift]:])
+    (tab :))
+
+(only-in [source.js.jquery meta.selector.jquery])
+
+(snippet [:nth-child(%{1="n"})%{0}])

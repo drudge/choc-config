@@ -1,0 +1,9 @@
+(name [gt(n) selector])
+
+(trigger
+    (key [[ctrl][shift]:])
+    (tab :))
+
+(only-in [source.js.jquery meta.selector.jquery])
+
+(snippet [:gt(%{1="n"})%{0}])

@@ -1,0 +1,8 @@
+(name filter)
+
+(trigger
+    (tab .filter))
+
+(only-in source.js.jquery)
+
+(snippet [.filter('%{1="selector expression"}')%{0}])

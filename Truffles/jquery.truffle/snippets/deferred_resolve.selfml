@@ -1,0 +1,8 @@
+(name deferred.resolve)
+
+(trigger
+    (tab .resolve))
+
+(only-in source.js.jquery)
+
+(snippet [.resolve(%{1="args"})%{0}])

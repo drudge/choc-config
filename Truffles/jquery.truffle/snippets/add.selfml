@@ -1,0 +1,8 @@
+(name add)
+
+(trigger
+    (tab .add))
+
+(only-in source.js.jquery)
+
+(snippet [.add('%{1="selector/elements/html"}')%{0}])

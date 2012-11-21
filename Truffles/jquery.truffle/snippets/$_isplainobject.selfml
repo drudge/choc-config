@@ -1,0 +1,8 @@
+(name $.isPlainObject)
+
+(trigger
+    (tab $.isPlainObject))
+
+(only-in source.js.jquery)
+
+(snippet [$.isPlainObject('%{1="object"}')%{0}])

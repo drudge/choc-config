@@ -1,0 +1,11 @@
+(name [document ready (safe)])
+
+(trigger
+    (tab ready))
+
+(only-in source.js.jquery)
+
+(snippet [jQuery(document).ready(function($) {
+	%{0="// Stuff to do as soon as the DOM is ready. Use \\$() w/o colliding with other libs;"}
+});
+])

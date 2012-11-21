@@ -1,0 +1,10 @@
+(name keydown)
+
+(trigger
+    (tab .keydown))
+
+(only-in source.js.jquery)
+
+(snippet [.keydown(%{1="function(%{2="event"}) {
+	%{0="// Act on the event"}
+\\"}});])

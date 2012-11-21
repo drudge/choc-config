@@ -1,0 +1,8 @@
+(name jQuery.parseJSON)
+
+(trigger
+    (tab jQuery.parseJSON))
+
+(only-in source.js.jquery)
+
+(snippet [jQuery.parseJSON(%{1="json"});%{0}])

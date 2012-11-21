@@ -1,0 +1,8 @@
+(name has)
+
+(trigger
+    (tab .has))
+
+(only-in source.js.jquery)
+
+(snippet [.has(%{1/(.+)/(?1:':)/}%{1="contained selector/element"}%{1/(.+)/(?1:':)/})%{0}])

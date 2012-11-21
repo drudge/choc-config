@@ -1,0 +1,8 @@
+(name off)
+
+(trigger
+    (tab .off))
+
+(only-in source.js.jquery)
+
+(snippet [.off('%{1="event name(s)"}'%{2/(^,).*|.+/(?1::, )/}%{2/(^([0-9]+$|,.*))|.+/(?1::)/}%{2="functionName"}%{2/(^([0-9]+$|,.*))|.+/(?1::)/})%{0}])

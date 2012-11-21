@@ -1,0 +1,11 @@
+(name [hide (with callback)])
+
+(trigger
+    (tab .hide))
+
+(only-in source.js.jquery)
+
+(snippet [.hide(%{1/(^[0-9]+$)|.+/(?1::')/}%{1="slow/400/fast"}%{1/(^[0-9]+$)|.+/(?1::')/}, function() {
+	%{0="//Stuff to do *after* the animation takes place"};
+});
+])

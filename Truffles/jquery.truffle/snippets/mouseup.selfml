@@ -1,0 +1,10 @@
+(name mouseup)
+
+(trigger
+    (tab .mouseup))
+
+(only-in source.js.jquery)
+
+(snippet [.mouseup(%{1="function(%{2="event"}) {
+	%{0="// Act on the event"}
+\\"}});])

@@ -1,0 +1,8 @@
+(name clearqueue)
+
+(trigger
+    (tab .clearQueue))
+
+(only-in source.js.jquery)
+
+(snippet [.clearQueue(%{1/(.+)/(?1:':)/}%{1="queueName"}%{1/(.+)/(?1:':)/})%{0}])

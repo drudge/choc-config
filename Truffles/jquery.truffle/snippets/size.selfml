@@ -1,0 +1,8 @@
+(name size)
+
+(trigger
+    (tab .size))
+
+(only-in source.js.jquery)
+
+(snippet [.size()%{0}])

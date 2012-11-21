@@ -1,0 +1,8 @@
+(name prop)
+
+(trigger
+    (tab .prop))
+
+(only-in source.js.jquery)
+
+(snippet [.prop('%{1="property"}'%{2/(^,).*|.+/(?1::, )/}%{2/(^([0-9]+$|,.*))|.+/(?1::')/}%{2="value"}%{2/(^([0-9]+$|,.*))|.+/(?1::')/})%{0}])

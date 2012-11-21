@@ -1,0 +1,8 @@
+(name jQuery.noop)
+
+(trigger
+    (tab jQuery.noop))
+
+(only-in source.js.jquery)
+
+(snippet [jQuery.noop()%{0=";"}%{1}])

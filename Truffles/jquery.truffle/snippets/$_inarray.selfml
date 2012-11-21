@@ -1,0 +1,8 @@
+(name $.inArray)
+
+(trigger
+    (tab $.inArray))
+
+(only-in source.js.jquery)
+
+(snippet [$.inArray(%{1="value"}, %{2="array"});%{0}])

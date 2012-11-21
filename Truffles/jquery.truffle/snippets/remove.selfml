@@ -1,0 +1,8 @@
+(name remove)
+
+(trigger
+    (tab .remove))
+
+(only-in source.js.jquery)
+
+(snippet [.remove()%{0}])

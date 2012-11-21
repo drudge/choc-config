@@ -1,0 +1,11 @@
+(name ajaxSend)
+
+(trigger
+    (tab .ajaxSend))
+
+(only-in source.js.jquery)
+
+(snippet [.ajaxSend(function(%{1="event, xhr, settings"}) {
+  %{2="//stuff to do before an AJAX request is sent"};
+});
+%{0}])

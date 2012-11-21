@@ -1,0 +1,8 @@
+(name event.target)
+
+(trigger
+    (tab et))
+
+(only-in source.js.jquery)
+
+(snippet [%{1="event"}.target%{0}])

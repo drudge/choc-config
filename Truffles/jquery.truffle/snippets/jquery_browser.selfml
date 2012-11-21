@@ -1,0 +1,8 @@
+(name jQuery.browser)
+
+(trigger
+    (tab jQuery.browser))
+
+(only-in source.js.jquery)
+
+(snippet [jQuery.browser%{1/(.+)/(?1:.:)/}%{1="webkit/opera/msie/mozilla"}%{1/(.+)/(?1: :)/}%{0}])

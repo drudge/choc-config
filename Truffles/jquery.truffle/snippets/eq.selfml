@@ -1,0 +1,8 @@
+(name eq)
+
+(trigger
+    (tab .eq))
+
+(only-in source.js.jquery)
+
+(snippet [.eq(%{1="index"})%{0}])

@@ -1,0 +1,10 @@
+(name each)
+
+(trigger
+    (tab .each))
+
+(only-in source.js.jquery)
+
+(snippet [.each(function(index) {
+  %{0="this.innerHTML = this + \" is the element, \" + index + \" is the position\";"}
+});])

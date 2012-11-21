@@ -1,0 +1,8 @@
+(name scrollTop)
+
+(trigger
+    (tab .scrollTop))
+
+(only-in source.js.jquery)
+
+(snippet [.scrollTop(%{1="value"})%{0}])

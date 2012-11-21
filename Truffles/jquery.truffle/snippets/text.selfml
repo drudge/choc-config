@@ -1,0 +1,8 @@
+(name text)
+
+(trigger
+    (tab .text))
+
+(only-in source.js.jquery)
+
+(snippet [.text(%{1="'some text'"})%{0}])
