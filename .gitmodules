@@ -49,3 +49,6 @@
 [submodule "Mixins/csscomb.chocmixin"]
 	path = Mixins/csscomb.chocmixin
 	url = git@github.com:drudge/csscomb.chocmixin.git
+[submodule "Mixins/move-lines.chocmixin"]
+	path = Mixins/move-lines.chocmixin
+	url = git://github.com/chromice/move-lines.chocmixin.git
