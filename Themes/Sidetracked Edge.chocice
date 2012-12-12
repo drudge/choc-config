@@ -12,6 +12,14 @@
     Comment
     (color [rgba(0.415686, 0.352941, 0.235294, 1.000000)]))
 
+(apply punctuation.shebang
+    [Shebang Punctuation]
+    (color [rgba(0.400000, 0.400000, 0.400000, 1.000000)]))
+
+(apply comment.shebang
+    [Shebang Command]
+    (color [rgba(0.000000, 0.501961, 0.501961, 0.960000)]))
+
 (apply constant
     Constant
     (color [rgba(0.847059, 0.717647, 0.470588, 1.000000)]))
@@ -271,6 +279,42 @@
 (apply [diff.header, diff.meta.range]
     [Diff Header]
     (color [rgba(0.701961, 0.701961, 0.701961, 1.000000)]))
+
+(apply bold
+    (bold))
+
+(apply italic
+    (italic))
+
+(apply underline
+    (underline))
+
+(apply bold
+    (bold))
+
+(apply italic
+    (italic))
+
+(apply underline
+    (underline))
+
+(apply bold
+    (bold))
+
+(apply italic
+    (italic))
+
+(apply underline
+    (underline))
+
+(apply bold
+    (bold))
+
+(apply italic
+    (italic))
+
+(apply underline
+    (underline))
 
 (apply bold
     (bold))
