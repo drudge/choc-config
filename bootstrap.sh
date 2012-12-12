@@ -32,3 +32,4 @@ git clone $REPO "$APP_SUPPORT" --recursive --quiet
 
 source "$APP_SUPPORT/update-links.sh"
 source "$APP_SUPPORT/set-prefs.sh"
+source "$APP_SUPPORT/set-types.sh"
