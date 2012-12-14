@@ -44,7 +44,7 @@
                 (2 keyword.operator.js))))
     (zone meta.function.js
         (match
-            (regex [\b(function)\s+([a-zA-Z_$]\w*)?\s*(\()(.*?)(\))]
+            (regex [\b(function)\s*([a-zA-Z_$]\w*)?\s*(\()(.*?)(\))]
                 (3 punctuation.definition.parameters.begin.js)
                 (4 variable.parameter.function.js)
                 (5 punctuation.definition.parameters.end.js)
