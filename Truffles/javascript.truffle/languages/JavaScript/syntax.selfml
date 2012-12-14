@@ -128,16 +128,21 @@
         (match
             (regex [(//).*$\n?]
                 (1 punctuation.definition.comment.js))))
-    (zone comment.line.double-slash.js
-        (match
-            (regex [(#\!).*$\n?]
-                (0 punctuation.definition.shebang.js))))
-                (1 punctuation.definition.comment.shebang.js))))
     (zone comment.block.html.js
         (match
             (regex [(<!--|-->)]
                 (0 punctuation.definition.comment.html.js)
                 (2 punctuation.definition.comment.html.js))))
+    (zone support.property.js
+        (match
+            (match
+                (regex [(?<=^|,|\{)\s*(((')((?:\[^'\]|\\')+?)((?<!\\)'))\s*(:))]
+                    (1 variable.peoperty.x-assignment.js)
+                    (2 string.quoted.single.js)
+                    (3 punctuation.definition.begin.js)
+                    (4 name)
+                    (5 punctuation.definition.end.js)
+                    (6 operator.assignment.js)))))
     (zone storage.type.js
         (match
             (list boolean byte char class double enum float function int interface long short var void)
@@ -170,6 +175,17 @@
     (zone keyword.other.js
         (match
             (list debugger)
+            (boundary.both)))
+    (zone support.class.node.js
+        (match
+            (list global process exports module)
+            (boundary.both)))
+    (zone support.function.node.js
+        (match
+            (list require)))
+    (zone support.constant.node.js
+        (match
+            (list __dirname __filename)
             (boundary.both)))
     (zone support.class.js
         (match

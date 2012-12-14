@@ -1,7 +1,9 @@
 (detector
     (extension js)
     (extension htc)
-    (extension jsx))
+    (extension jsx)
+    (extension jake)
+    (extension Jakefile))
 
 (folding
     (start [^.*\bfunction\s*(\w+\s*)?\([^\)]*\)(\s*\{[^\}]*)?\s*$])
