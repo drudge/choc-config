@@ -1,0 +1,9 @@
+(name [Object key — key: "value"])
+
+(trigger
+    (key [[alt][shift]:])
+    (tab :))
+
+(only-in source.js)
+
+(snippet [%{1="key"}: %{2="\"%{3="value"}\""}%{4=", "}])

@@ -1,0 +1,11 @@
+(name Prototype)
+
+(trigger
+    (tab proto))
+
+(only-in source.js)
+
+(snippet [%{1="class_name"}.prototype.%{2="method_name"} = function(%{3="first_argument"}) {
+	%{0="// body..."}
+};
+])

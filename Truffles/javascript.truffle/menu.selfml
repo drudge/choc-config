@@ -1,0 +1,8 @@
+(menu
+    (submenu Core
+        (submenu Control snippet.if snippet.if-___-else --- [snippet.for-(…)-{…}] [snippet.for-(…)-{…}-(faster)])
+        (submenu Language snippet.object-key-—-key-"value" snippet.object-value-js --- [snippet.prototype-(proto)])
+        (submenu Function snippet.function [snippet.function-(fun)] --- command.new-function command.new-method --- snippet.object-method snippet.object-method-string))
+    (submenu DOM snippet.get-elements)
+    (submenu BOM snippet.settimeout-function)
+    command.copy-as-bookmarklet-to-clipboard)

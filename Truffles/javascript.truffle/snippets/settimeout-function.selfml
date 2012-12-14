@@ -1,0 +1,8 @@
+(name [setTimeout function])
+
+(trigger
+    (tab timeout))
+
+(only-in source.js)
+
+(snippet [setTimeout(function() {%{0}}%{2}, %{1="10"});])

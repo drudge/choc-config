@@ -12,3 +12,7 @@ echo "Linking templates..."
 
 rm "$CHOCOLAT_APP/Contents/Resources/boilerplate.json"
 ln -s "$APP_SUPPORT/boilerplate.json" "$CHOCOLAT_APP/Contents/Resources/boilerplate.json"
+
+echo "Removing built-in JavaScript truffle..."
+
+rm -rf "$CHOCOLAT_APP/Contents/SharedSupport/Truffles/javascript.truffle"

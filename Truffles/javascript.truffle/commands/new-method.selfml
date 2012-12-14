@@ -1,0 +1,18 @@
+(trigger
+    (key [[alt][shift][enter]]))
+
+(name [New Method])
+
+(only-in source.js)
+
+(input selection word)
+
+(output snippet)
+
+(save nothing)
+
+(script [cat <<SNIPPET
+${TM_SELECTED_TEXT:-$TM_CURRENT_WORD}: function(\${1:args}) {
+	\$0
+}\${2:,}
+SNIPPET])

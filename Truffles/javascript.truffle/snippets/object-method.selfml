@@ -1,0 +1,10 @@
+(name [Object Method])
+
+(trigger
+    (tab :f))
+
+(only-in source.js)
+
+(snippet [%{1="method_name"}: function(%{3="attribute"}){
+	%{0}
+}%{10=","}])

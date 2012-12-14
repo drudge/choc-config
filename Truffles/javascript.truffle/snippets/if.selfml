@@ -1,0 +1,8 @@
+(name if)
+
+(trigger
+    (tab if))
+
+(only-in source.js)
+
+(snippet [if (%{1="true"}) {%{0="%{TM_SELECTED_TEXT}"}};])

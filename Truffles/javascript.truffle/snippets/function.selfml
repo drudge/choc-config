@@ -1,0 +1,8 @@
+(name [Anonymous Function])
+
+(trigger
+    (tab f))
+
+(only-in source.js)
+
+(snippet [function(%{1}) {%{0="%{TM_SELECTED_TEXT}"}};])

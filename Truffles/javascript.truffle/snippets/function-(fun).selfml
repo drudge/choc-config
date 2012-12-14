@@ -1,0 +1,10 @@
+(name Function)
+
+(trigger
+    (tab fun))
+
+(only-in source.js)
+
+(snippet [function %{1="function_name"}(%{2="argument"}) {
+	%{0="// body..."}
+}])

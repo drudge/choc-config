@@ -1,0 +1,48 @@
+(detector
+    (extension js)
+    (extension htc)
+    (extension jsx))
+
+(folding
+    (start [^.*\bfunction\s*(\w+\s*)?\([^\)]*\)(\s*\{[^\}]*)?\s*$])
+    (stop [^\s*\}]))
+
+(shell-variables
+    (TM_COMMENT_START [// ])
+    (TM_COMMENT_START_2 /*)
+    (TM_COMMENT_END_2 */))
+
+(comment.line [// ])
+
+(comment.block /* */)
+
+(indentation.decrease [^(.*\*/)?\s*(\}|\))([^{]*\{)?([;,]?\s*|\.[^{]*|\s*\)[;\s]*)$])
+
+(indentation.increase [^.*(\{[^}"']*|\([^)"']*)$])
+
+(in [source.js meta.property.function entity.name.function]
+    (symbol-list))
+
+(in [source.js entity.name.type.class]
+    (symbol-list
+        (transformation [
+      s/^/• /g;
+   ])))
+
+(in [source.js entity.name.instance]
+    (symbol-list
+        (transformation [
+      s/^/\t/g;
+   ])))
+
+(in [source.js object.property.function -(meta.group meta.group)]
+    (symbol-list
+        (transformation [
+      s/^/ :/g;
+   ])))
+
+(in [source.js meta.group meta.group object.property.function]
+    (symbol-list
+        (transformation [
+      s/^/  :/g;
+   ])))
