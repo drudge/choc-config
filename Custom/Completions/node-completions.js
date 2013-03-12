@@ -2,7 +2,7 @@ var http = require('http')
   , fs = require('fs')
   , out = {};
 
-[ 'process', 'stdio', 'util', 'fs', 'domain', 'net', 'http', 'https', 'tls', 'events', 'crypto', 'path', 'url', 'vm', 'querystring', 'os', 'tty', 
+[ 'process', 'stdio', 'util', 'fs', 'domain', 'net', 'http', 'https', 'tls', 'events', 'child_process', 'crypto', 'path', 'url', 'vm', 'querystring', 'os', 'tty',
   'punycode', 'zlib', 'dns', 'dgram'].forEach(function(moduleName) {
   var opts = {
       host: 'nodejs.org'
@@ -16,7 +16,7 @@ var http = require('http')
 
     if (res.statusCode !== 200) {
       console.log('Failed to fetch:', opts.path);
-      return; 
+      return;
     }
 
     res.on('data', function (chunk) {
@@ -28,10 +28,10 @@ var http = require('http')
         , module;
 
       try {
-        json = JSON.parse(body); 
+        json = JSON.parse(body);
       } catch (e) {
         console.log('Failed to parse:', opts.path);
-        return; 
+        return;
       }
       if (json.modules) {
         module = json.modules[0];
@@ -39,7 +39,7 @@ var http = require('http')
          module = json.globals[0];
 
          if (moduleName == 'stdio') {
-          moduleName = 'console'; 
+          moduleName = 'console';
          }
       }
 
@@ -71,7 +71,7 @@ var http = require('http')
         }
       }
 
-      if (module.classes) {      
+      if (module.classes) {
         out[moduleName]['classes'] = {
            icon:'class'
           , items: []
