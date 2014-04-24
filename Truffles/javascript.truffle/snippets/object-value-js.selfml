@@ -1,8 +1,0 @@
-(name [Object Value JS])
-
-(trigger
-    (tab :,))
-
-(only-in source.js)
-
-(snippet [%{1="value_name"}:%{0="value"},])

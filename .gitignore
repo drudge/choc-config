@@ -4,5 +4,6 @@ ProjectIndexes
 diglett-watchd
 recent_projects.plist
 allrecents.txt
-projects.db
+*.db
+*.storedata
 Projects.old
