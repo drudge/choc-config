@@ -1,8 +1,10 @@
 (name [bdd - after])
 
+(blessed true)
+
 (trigger
     (tab a))
 
-(snippet [after(function(){
+(snippet [after(function() {
   %{0}
 })])

@@ -1,8 +1,10 @@
 (name [bdd - describe])
 
+(blessed true)
+
 (trigger
     (tab des))
 
-(snippet [describe('%{1}', function(){
+(snippet [describe('%{1}', function() {
   %{0}
 })])
