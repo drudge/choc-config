@@ -7,4 +7,4 @@
 
 (snippet [describe('%{1}', function() {
   %{0}
-})])
+});])

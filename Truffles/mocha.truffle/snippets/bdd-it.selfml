@@ -7,4 +7,4 @@
 
 (snippet [it('should %{1}', function() {
   %{0}
-})])
+});])
